@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = Protocol
+build_property.ProjectDir = F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GameEngine/1.0.0": {
+        "dependencies": {
+          "FarseerPhysics": "3.5.0"
+        },
+        "runtime": {
+          "GameEngine.dll": {}
+        }
+      },
+      "FarseerPhysics/3.5.0": {
+        "runtime": {
+          "lib/NET40/FarseerPhysics.dll": {
+            "assemblyVersion": "3.5.0.38023",
+            "fileVersion": "3.5.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GameEngine/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FarseerPhysics/3.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GUTweFZPAyHX0qtFCfiGB7iIOAh+o/H7Y+XxqF3git4y7Cp/q12GcAK6vrllI8bdfeNIKPCEf349lut7csYwhw==",
+      "path": "farseerphysics/3.5.0",
+      "hashPath": "farseerphysics.3.5.0.nupkg.sha512"
+    }
+  }
+}

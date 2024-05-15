@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2DSurviveGameServer", "2DSurviveGameServer\2DSurviveGameServer.csproj", "{0E545141-EB41-49DA-9C66-D48E98D70608}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Protocol", "Protocol\Protocol.csproj", "{5429E325-FC72-4BE6-9F1F-DE895870A26E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngine", "GameEngine\GameEngine.csproj", "{FACD9087-2C8A-4688-9417-E81529423E8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E545141-EB41-49DA-9C66-D48E98D70608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E545141-EB41-49DA-9C66-D48E98D70608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E545141-EB41-49DA-9C66-D48E98D70608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E545141-EB41-49DA-9C66-D48E98D70608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5429E325-FC72-4BE6-9F1F-DE895870A26E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5429E325-FC72-4BE6-9F1F-DE895870A26E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5429E325-FC72-4BE6-9F1F-DE895870A26E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5429E325-FC72-4BE6-9F1F-DE895870A26E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FACD9087-2C8A-4688-9417-E81529423E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACD9087-2C8A-4688-9417-E81529423E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACD9087-2C8A-4688-9417-E81529423E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACD9087-2C8A-4688-9417-E81529423E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDA2D1BC-5C98-48CE-8743-7ACF6EA0686A}
+	EndGlobalSection
+EndGlobal

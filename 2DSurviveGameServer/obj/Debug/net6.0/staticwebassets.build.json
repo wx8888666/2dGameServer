@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "1h0kvcwgllK7rqzbz+XBhh0sJJTa2X7+5z2dn3Vibhg=",
+  "Source": "2DSurviveGameServer",
+  "BasePath": "_content/2DSurviveGameServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "2DSurviveGameServer\\wwwroot",
+      "Source": "2DSurviveGameServer",
+      "ContentRoot": "F:\\游戏源码\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\wwwroot\\",
+      "BasePath": "_content/2DSurviveGameServer",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "F:\\游戏源码\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\wwwroot\\123.jpg",
+      "SourceId": "2DSurviveGameServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\游戏源码\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\wwwroot\\",
+      "BasePath": "_content/2DSurviveGameServer",
+      "RelativePath": "123.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\123.jpg"
+    },
+    {
+      "Identity": "F:\\游戏源码\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\wwwroot\\ys.jpg",
+      "SourceId": "2DSurviveGameServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\游戏源码\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\wwwroot\\",
+      "BasePath": "_content/2DSurviveGameServer",
+      "RelativePath": "ys.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ys.jpg"
+    }
+  ]
+}

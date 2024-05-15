@@ -1,0 +1,117 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "FarseerPhysics/3.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/NET40/FarseerPhysics.dll": {}
+        },
+        "runtime": {
+          "lib/NET40/FarseerPhysics.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FarseerPhysics/3.5.0": {
+      "sha512": "GUTweFZPAyHX0qtFCfiGB7iIOAh+o/H7Y+XxqF3git4y7Cp/q12GcAK6vrllI8bdfeNIKPCEf349lut7csYwhw==",
+      "type": "package",
+      "path": "farseerphysics/3.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "farseerphysics.3.5.0.nupkg.sha512",
+        "farseerphysics.nuspec",
+        "lib/NET40/FarseerPhysics.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "FarseerPhysics >= 3.5.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "F:\\游戏源码\\2DSurviveGameServer\\2DSurviveGameServer\\GameEngine\\GameEngine.csproj",
+      "projectName": "GameEngine",
+      "projectPath": "F:\\游戏源码\\2DSurviveGameServer\\2DSurviveGameServer\\GameEngine\\GameEngine.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "F:\\游戏源码\\2DSurviveGameServer\\2DSurviveGameServer\\GameEngine\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "F:\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "FarseerPhysics": {
+            "target": "Package",
+            "version": "[3.5.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net6.0”还原包“FarseerPhysics 3.5.0”。此包可能与项目不完全兼容。",
+      "libraryId": "FarseerPhysics",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

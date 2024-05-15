@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>_2DSurviveGameServer</RootNamespace>
+	<ServerGarbageCollection>false</ServerGarbageCollection>
+	<ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+	<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DLL\**" />
+    <Content Remove="DLL\**" />
+    <EmbeddedResource Remove="DLL\**" />
+    <None Remove="DLL\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SqlSugarCore" Version="5.1.4.142" />
+    <PackageReference Include="Yitter.IdGenerator" Version="1.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameEngine\GameEngine.csproj" />
+    <ProjectReference Include="..\Protocol\Protocol.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Kcp">
+      <HintPath>DLL\Kcp.dll</HintPath>
+    </Reference>
+    <Reference Include="KCPNet">
+      <HintPath>DLL\KCPNet.dll</HintPath>
+    </Reference>
+    <Reference Include="PETimer">
+      <HintPath>DLL\PETimer.dll</HintPath>
+    </Reference>
+    <Reference Include="PEUtils">
+      <HintPath>DLL\PEUtils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

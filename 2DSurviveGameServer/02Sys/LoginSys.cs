@@ -1,0 +1,68 @@
+﻿using _2DSurviveGameServer._01Common;
+using _2DSurviveGameServer._03Svc;
+using _2DSurviveGameServer.Helpers;
+using Protocol.Body;
+using Protocol.DBModel;
+
+namespace _2DSurviveGameServer._02Sys
+{
+    public class LoginSys:SysRoot<LoginSys>
+    {
+        public override void Init()
+        {
+            base.Init();
+
+            netSvc.AddMsgHandle(Protocol.CMD.ReqLogin, ReqLogin);
+            netSvc.AddMsgHandle(Protocol.CMD.ReqLogout, ReqLogout);
+        }
+
+        public override void Update()
+        {
+            base.Update();
+        }
+
+        /// <summary>
+        /// 客户端请求登录
+        /// </summary>
+        /// <param name="pack"></param>
+        void ReqLogin(MsgPack pack)
+        {
+            ReqLogin req = pack.msg.reqLogin;
+            RspLogin rsp = new RspLogin();
+            Account account = SqlSugarHelper.Db.Queryable<Account>().First(p=>p.Username == req.username && p.Password == req.password);
+            if(account == null)
+            {
+                //登录失败，账号密码不匹配
+                rsp.loginEnum = LoginEnum.Failed;
+                rsp.error = "账号或密码不正确";
+            }
+            else
+            {
+                rsp.loginEnum = LoginEnum.Success;
+                //有一些东西要写的...
+                User user = SqlSugarHelper.Db.Queryable<User>().First(p => p.UId == account.Id);
+                rsp.user = user;
+                rsp.uid = account.Id;//返回uid
+                cacheSvc.UpdateUidUser(account.Id, user);
+                cacheSvc.UpdateUserHeartbeat(account.Id, pack.session);
+            }
+
+            pack.session.SendMsg(new Protocol.Msg
+            {
+                cmd = Protocol.CMD.RspLogin,
+                rspLogin = rsp,
+            });
+        }
+
+
+        void ReqLogout(MsgPack pack)
+        {
+            cacheSvc.RemoveUser(pack.msg.reqLogout.uid);
+
+            pack.session.SendMsg(new Protocol.Msg
+            {
+                cmd = Protocol.CMD.RspLogout,
+            });
+        }
+    }
+}
