@@ -133,10 +133,11 @@ namespace _2DSurviveGameServer._02Sys
                             {
                                 roomId = room.RoomId,
                                 userArr = userList.ToArray(),
-                                //roleStateArr = 
+                                roleStateArr = roomStateFight.GetRoleState(),
+                                //少写了给武器
                             }
                         }
-                    });
+                    }) ; 
                 }
             }
         }

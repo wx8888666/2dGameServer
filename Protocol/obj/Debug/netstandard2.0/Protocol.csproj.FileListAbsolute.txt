@@ -32,3 +32,4 @@ F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netst
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netstandard2.0\Protocol.csproj.Up2Date
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netstandard2.0\Protocol.dll
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netstandard2.0\Protocol.pdb
+F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netstandard2.0\Protocol.sourcelink.json

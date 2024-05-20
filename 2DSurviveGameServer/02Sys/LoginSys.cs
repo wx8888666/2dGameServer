@@ -1,8 +1,10 @@
 ﻿using _2DSurviveGameServer._01Common;
 using _2DSurviveGameServer._03Svc;
 using _2DSurviveGameServer.Helpers;
+using Protocol;
 using Protocol.Body;
 using Protocol.DBModel;
+using System.Security.Cryptography;
 
 namespace _2DSurviveGameServer._02Sys
 {
@@ -45,6 +47,7 @@ namespace _2DSurviveGameServer._02Sys
                 rsp.uid = account.Id;//返回uid
                 cacheSvc.UpdateUidUser(account.Id, user);
                 cacheSvc.UpdateUserHeartbeat(account.Id, pack.session);
+                SendTasksToClient(pack);
             }
 
             pack.session.SendMsg(new Protocol.Msg
@@ -62,6 +65,28 @@ namespace _2DSurviveGameServer._02Sys
             pack.session.SendMsg(new Protocol.Msg
             {
                 cmd = Protocol.CMD.RspLogout,
+            });
+        }
+        //新增任务发送
+        void SendTasksToClient(MsgPack pack)
+        {
+            // 获取任务列表
+            List<GameTask> gameTasks = GameTaskSys.Instance.GetTasks();
+
+            // 初始化RspTask并转换GameTask到GTask的数组
+            RspTask rspTask = new RspTask();
+            rspTask.tasks = gameTasks.Select(v => new GTask
+            {
+                Name = v.Name,
+                Task = v.Task,
+                Reward = v.Reward
+            }).ToArray(); // 使用LINQ Select转换并转为数组
+
+            // 发送消息给客户端
+            pack.session.SendMsg(new Protocol.Msg
+            {
+                cmd = Protocol.CMD.RspTask,
+                rspTask = rspTask,
             });
         }
     }

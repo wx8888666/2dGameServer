@@ -1,6 +1,7 @@
 ﻿using _2DSurviveGameServer._01Common;
 using _2DSurviveGameServer._03Svc;
 using Protocol;
+using Protocol.Body;
 using Yitter.IdGenerator;
 
 namespace _2DSurviveGameServer._02Sys.Room
@@ -17,6 +18,7 @@ namespace _2DSurviveGameServer._02Sys.Room
             netSvc.AddMsgHandle(CMD.SndConfirm, SndConfirm);
             netSvc.AddMsgHandle(CMD.SndLoadPrg, SndLoadPrg);
             netSvc.AddMsgHandle(CMD.SndRoleState, SndRoleState);
+            netSvc.AddMsgHandle(CMD.SndEnterRoom, SndEnterRoom);
         }
 
         public override void Update()
@@ -75,6 +77,15 @@ namespace _2DSurviveGameServer._02Sys.Room
             {
                 room.SndRoleState(pack.msg.sndRoleState.uid, pack.msg.sndRoleState.roleState);
             }
+        }
+        void SndEnterRoom(MsgPack pack)
+        {
+            SndEnterRoom snd=pack.msg.sndEnterRoom;
+            if (gameRoomDic.TryGetValue(snd.roomId, out GameRoom room))
+            {
+                room.SndEnterRoom(snd.uid);
+            }
+
         }
     }
 }

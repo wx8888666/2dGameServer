@@ -30,6 +30,7 @@ namespace Protocol
         public SndEnterRoom sndEnterRoom;
         public ReqReg reqReg;
         public RspReg rspReg;
+        public RspTask rspTask;
     }
 
 }

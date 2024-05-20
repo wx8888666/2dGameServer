@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\2DSurviveGameServer",
+    "\\2DSurviveGameServer\\01Common",
     "\\2DSurviveGameServer\\02Sys",
     "\\2DSurviveGameServer\\03Svc"
   ],
-  "SelectedNode": "\\2DSurviveGameServer\\02Sys\\ReconnectSys.cs",
+  "SelectedNode": "\\2DSurviveGameServer.sln",
   "PreviewInSolutionExplorer": false
 }

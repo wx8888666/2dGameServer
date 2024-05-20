@@ -48,4 +48,17 @@ namespace Protocol.Body
         public LoginEnum LoginEnum;
         public string Error;
     }
+    [Serializable]
+    public class GTask    
+    {
+        public string Name;
+        public string Task;
+        public bool Reward;
+    }
+    [Serializable]
+    public class RspTask
+    {
+        
+        public GTask[] tasks;
+    }
 }

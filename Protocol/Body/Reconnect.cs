@@ -60,5 +60,6 @@ namespace Protocol.Body
         public long roomId;
         public User[] userArr;
         public RoleState[] roleStateArr;
+        public WeaponObject[] weaponObjectArr;
     }
 }

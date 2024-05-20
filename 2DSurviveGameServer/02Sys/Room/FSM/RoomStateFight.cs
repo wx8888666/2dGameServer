@@ -101,10 +101,18 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         {
         }
 
-
+    
         public void UpdateRole(int posIndex,RoleState roleState)
         {
             roleActorList[posIndex].UpdateState(roleState);
         }
+        public  RoleState[] GetRoleState()
+        {
+            return roleActorList.Select(v => v.RoleState).ToArray();
+        }
+        //public WeaponObject[] GetWeaponObjectArr()
+        //{
+        //    re
+        //}
     }
 }

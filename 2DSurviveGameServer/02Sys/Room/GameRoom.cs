@@ -195,5 +195,10 @@ namespace _2DSurviveGameServer._02Sys.Room
                 }
             }
         }
+
+        public void SndEnterRoom(long uid)
+        {
+            OnlineArr[GetPosIndex(uid)]=true;
+        }
     }
 }

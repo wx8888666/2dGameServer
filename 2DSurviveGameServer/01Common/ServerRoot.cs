@@ -35,6 +35,8 @@ namespace _2DSurviveGameServer._01Common
             LobbySys.Instance.Init();
             RoomSys.Instance.Init();
             RegSys.Instance.Init();
+            GameTaskSys.Instance.Init();
+            ReconnectSys.Instance.Init();
         }
 
         public void Update()
@@ -49,6 +51,7 @@ namespace _2DSurviveGameServer._01Common
             LobbySys.Instance.Update();
             RoomSys.Instance.Update();
             RegSys.Instance.Update();
+            ReconnectSys.Instance.Update();
         }
     }
 }
