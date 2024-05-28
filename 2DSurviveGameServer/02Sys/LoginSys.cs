@@ -41,13 +41,13 @@ namespace _2DSurviveGameServer._02Sys
             else
             {
                 rsp.loginEnum = LoginEnum.Success;
-                //有一些东西要写的...
+                //返回该账号的uid和角色以及其他。
                 User user = SqlSugarHelper.Db.Queryable<User>().First(p => p.UId == account.Id);
                 rsp.user = user;
                 rsp.uid = account.Id;//返回uid
                 cacheSvc.UpdateUidUser(account.Id, user);
                 cacheSvc.UpdateUserHeartbeat(account.Id, pack.session);
-                SendTasksToClient(pack);
+                //SendTasksToClient(pack);
             }
 
             pack.session.SendMsg(new Protocol.Msg

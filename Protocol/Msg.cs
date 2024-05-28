@@ -5,7 +5,7 @@ using System;
 namespace Protocol
 {
     [Serializable]//标注上可以被序列化
-    public class Msg:KCPMsg  //这个就是我们的消息包类了
+    public class Msg:KCPMsg  //消息包类了
     {
         public CMD cmd;//指令，用于判定这条消息是干什么用的
         public ReqPing reqPing;
@@ -31,6 +31,9 @@ namespace Protocol
         public ReqReg reqReg;
         public RspReg rspReg;
         public RspTask rspTask;
+        public ReqFriedns reqFriends;
+        public RspFriends rspFriedns;
+        public ReqAddFriend reqAddFriend;
     }
 
 }

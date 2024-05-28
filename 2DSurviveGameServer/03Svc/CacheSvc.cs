@@ -11,7 +11,7 @@ namespace _2DSurviveGameServer._03Svc
         Dictionary<long, long> uidHeartbeatDic;//玩家UID对应心跳时间
         Dictionary<long, ServerSession> uidSessionDic;//玩家UID对应连接SID
         Dictionary<long, ClientStateEnum> uidClientStateDic;
-
+        Dictionary<long, Friends[]> uidFriendsList;
         public override void Init()
         {
             base.Init();
@@ -19,6 +19,7 @@ namespace _2DSurviveGameServer._03Svc
             uidHeartbeatDic = new Dictionary<long, long>();
             uidSessionDic = new Dictionary<long, ServerSession>();
             uidClientStateDic = new Dictionary<long, ClientStateEnum>();
+            uidFriendsList = new Dictionary<long, Friends[]>();
         }
 
 
@@ -121,8 +122,35 @@ namespace _2DSurviveGameServer._03Svc
             uidClientStateDic.TryGetValue(uid, out var clientState);
             return clientState;
         }
+        //添加好友系统
+        public void UpdateFriendsList(long uid)
+        {
+            var friends = SqlSugarHelper.Db.Queryable<Friends>()
+                             .Where(f => f.UId == uid)
+                             .ToArray();
+
+            if (uidFriendsList.ContainsKey(uid))
+            {
+                uidFriendsList[uid] = friends;
+            }
+            else
+            {
+                uidFriendsList.Add(uid, friends);
+            }
+
+        }
+        public Friends[] GetFriends(long uId)
+        {
+            if (uidFriendsList.TryGetValue(uId, out var friends))
+            {
+                return friends;
+            }
+
+            return new Friends[0];
+        }
+
 
     }
 
-    
+
 }

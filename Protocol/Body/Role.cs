@@ -100,5 +100,22 @@ namespace Protocol.Body
         public long roomId;
         public RoleState roleState;
     }
-   
+    //好友功能
+    [Serializable]
+    public class RspFriends
+    {
+        public Friends[] FriendsList;
+    }
+    [Serializable]
+    public class ReqFriedns
+    {
+        public long UId;
+    }
+    [Serializable]
+    public class ReqAddFriend
+    {
+        public long UId;
+        public long FriendUId;
+    }
+    
 }

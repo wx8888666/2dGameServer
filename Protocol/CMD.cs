@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Protocol.Body;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -35,5 +36,8 @@ namespace Protocol
         ReqReg,
         RspReg,
         RspTask,
-    }
+        ReqFriends,
+        RspFriedns,
+        ReqAddFriend,
+}
 }

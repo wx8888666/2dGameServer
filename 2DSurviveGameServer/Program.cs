@@ -19,7 +19,8 @@ namespace _2DSurviveGameServer
             var app = builder.Build();
 
             app.Urls.Add("http://*:5000");
-
+            //wwwroot在第一次编译的时候，会在bin中自动生成一个相同的目录，项目中的地址也是编译好后wwwroot的地址
+            //而不是源地址，在后面的编译中一般不会初始化这个wwwroot
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(AppContext.BaseDirectory + "wwwroot")

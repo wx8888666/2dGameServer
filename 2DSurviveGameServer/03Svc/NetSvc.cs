@@ -45,23 +45,6 @@ namespace _2DSurviveGameServer._03Svc
 
 
 
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    new Thread(() =>
-            //    {
-            //        while (true)
-            //        {
-            //            lock (pkgque_lock)
-            //            {
-            //                while (msgPackQueue.Count == 0)
-            //                {
-            //                    Monitor.Wait(pkgque_lock);
-            //                }
-            //                HandleMsg(msgPackQueue.Dequeue());
-            //            }
-            //        }
-            //    }).Start();
-            //}
         }
 
 
@@ -112,6 +95,7 @@ namespace _2DSurviveGameServer._03Svc
         /// <param name="pack"></param>
         void HandleMsg(MsgPack pack)
         {
+            //这里通过观察者，策略设计模式来唤醒对应的处理逻辑
             if(msgHandleDic.TryGetValue(pack.msg.cmd,out Action<MsgPack> handle))
             {
                 handle.Invoke(pack);
@@ -122,5 +106,7 @@ namespace _2DSurviveGameServer._03Svc
                 this.Error("Not Found Handle "+pack.msg.cmd);
             }
         }
+        //这里没有注销这个委托的原因是msgHandleDic是NetSvc类的成员，并且它的生命周期与NetSvc实例的生命周期一致。
+        //当NetSvc实例被回收时，msgHandleDic以及其中包含的所有委托也会被回收。而且整体项目不大。
     }
 }
