@@ -9,5 +9,7 @@ namespace Protocol.DBModel
     {
         public long UId { get; set; }
         public long FriendUId { get; set; }
+        public string roleName { get; set; }
+        public string Head { get; set; }
     }
 }

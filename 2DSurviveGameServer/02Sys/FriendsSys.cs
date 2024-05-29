@@ -1,9 +1,11 @@
 ﻿using _2DSurviveGameServer._01Common;
 using _2DSurviveGameServer._03Svc;
 using _2DSurviveGameServer.Helpers;
+using Microsoft.AspNetCore.Connections.Features;
 using Protocol;
 using Protocol.Body;
 using Protocol.DBModel;
+using System.Security.Cryptography;
 
 namespace _2DSurviveGameServer._02Sys
 {
@@ -19,16 +21,39 @@ namespace _2DSurviveGameServer._02Sys
         }
          void ReqAddFriend(MsgPack pack)
         {
+            
             ReqAddFriend reqAddFriend = pack.msg.reqAddFriend;
-            
-            var friend = new Friends
-            {
-                UId = reqAddFriend.UId,
-                FriendUId = reqAddFriend.FriendUId,
-            };
 
-            SqlSugarHelper.Db.Insertable(friend).ExecuteCommand();
+            var account = SqlSugarHelper.Db.Queryable<Friends>().First(p => p.UId== reqAddFriend.UId&&p.FriendUId==reqAddFriend.FriendUId);
+            var res = SqlSugarHelper.Db.Queryable<User>().First(p => p.UId == reqAddFriend.FriendUId);
+            bool isExist = (account != null);
+            if (isExist)
+            {
+                return;
+            }
+            else
+            {
+                if (res != null)
+                {
+                     var friend = new Friends
+                    {
+                        UId = reqAddFriend.UId,
+                        FriendUId = reqAddFriend.FriendUId,
+                        Head = res.Head,
+                        roleName=res.RoleName
+
+
+                    };
+                    var sum = SqlSugarHelper.Db.Queryable<User>().First(p => p.UId == reqAddFriend.FriendUId);
+                    if (sum!=null)
+                    {
+                        SqlSugarHelper.Db.Insertable(friend).ExecuteCommand();
+                    }
+                }
+                
+               
             
+            }
         }
        void ReqFriends(MsgPack pack)
         {
