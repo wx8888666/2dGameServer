@@ -117,5 +117,11 @@ namespace Protocol.Body
         public long UId;
         public long FriendUId;
     }
-    
+    [Serializable]
+    public class ReqDeleFriend
+    {
+        public long UId;
+        public long FriendUId;
+    }
+
 }

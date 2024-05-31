@@ -35,7 +35,7 @@ namespace _2DSurviveGameServer
 
 
             app.MapControllers();
-
+            //异步执行防止 while(true)执行不了
             app.RunAsync();
 
             ServerRoot.Instance.Init();

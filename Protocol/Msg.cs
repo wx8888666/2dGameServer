@@ -34,6 +34,7 @@ namespace Protocol
         public ReqFriedns reqFriends;
         public RspFriends rspFriedns;
         public ReqAddFriend reqAddFriend;
+        public ReqDeleFriend reqDeleFriend;
     }
 
 }

@@ -18,6 +18,7 @@ namespace _2DSurviveGameServer._02Sys
             FriendsList = new List<Friends>();
            netSvc.AddMsgHandle(Protocol.CMD.ReqAddFriend, ReqAddFriend);
             netSvc.AddMsgHandle(Protocol.CMD.ReqFriends, ReqFriends);
+            netSvc.AddMsgHandle(Protocol.CMD.ReqDeleFriend, ReqDeleFriend);
         }
          void ReqAddFriend(MsgPack pack)
         {
@@ -72,6 +73,13 @@ namespace _2DSurviveGameServer._02Sys
                 rspFriedns = rsp
             }
            );
+        }
+        void ReqDeleFriend(MsgPack pack)
+        {
+            ReqDeleFriend reqDeleFriend = pack.msg.reqDeleFriend;
+            bool isSuccess = SqlSugarHelper.Db.Deleteable<Friends>()
+            .Where(p => p.UId == reqDeleFriend.UId && p.FriendUId == reqDeleFriend.FriendUId)
+            .ExecuteCommand() > 0;
         }
     }
 }
