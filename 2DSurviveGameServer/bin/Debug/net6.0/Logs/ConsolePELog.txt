@@ -1,6 +1,6 @@
-[L]# 05:02:35--623  ThreadID:1 >> Server Start...
-[L]# 05:02:40--949  ThreadID:7 >> Client Connected sid:1
-[L]# 05:04:51--723  ThreadID:13 >> Client Connected sid:2
-[L]# 05:04:53--105  ThreadID:1 >> uid:8 变更连接 sid:2
-[L]# 05:05:20--207  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：1
-[L]# 05:05:20--968  ThreadID:1 >> 从匹配队列退出了一个，当前匹配队列人数：0
+[L]# 04:03:09--169  ThreadID:1 >> Server Start...
+[L]# 04:03:12--532  ThreadID:7 >> Client Connected sid:1
+[L]# 04:06:52--737  ThreadID:36 >> Client Connected sid:2
+[L]# 04:06:54--886  ThreadID:1 >> uid:8 变更连接 sid:2
+[L]# 04:07:22--427  ThreadID:46 >> Client Connected sid:3
+[L]# 04:07:24--288  ThreadID:1 >> uid:8 变更连接 sid:3
