@@ -40,5 +40,6 @@ namespace Protocol
         RspFriedns,
         ReqAddFriend,
         ReqDeleFriend,
-}
+        NtfSpawnWeapon,
+    }
 }

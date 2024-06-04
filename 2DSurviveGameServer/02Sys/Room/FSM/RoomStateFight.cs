@@ -3,6 +3,7 @@ using _2DSurviveGameServer._03Svc;
 using _2DSurviveGameServer.Helpers;
 using GameEngine;
 using Protocol.Body;
+using Yitter.IdGenerator;
 
 namespace _2DSurviveGameServer._02Sys.Room.FSM
 {
@@ -11,6 +12,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         GameWorld gameWorld;
         List<RoleActor> roleActorList;
         CancellationTokenSource cancellationTokenSource;
+        Dictionary<long, WeaponActor> weaponDic;
 
         public RoomStateFight(GameRoom room) : base(room)
         {
@@ -26,15 +28,19 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
             gameWorld = new GameWorld();
             roleActorList = new List<RoleActor>();
             cancellationTokenSource = new CancellationTokenSource();
+            weaponDic = new Dictionary<long, WeaponActor>();
 
             for(int i = 0;i<Room.UIdArr.Length;i++)
             {
                 RoleActor roleActor = gameWorld.Create<RoleActor>(new Microsoft.Xna.Framework.Vector2(1 + i, 1 + i));
-                roleActorList.Add(roleActor);
+                roleActorList.Add(roleActor); 
+                roleActor.Id=YitIdHelper.NextId();
                 roleActor.RoleState.uid = Room.UIdArr[i];
                 roleActor.RoleState.roleName = CacheSvc.Instance.GetUser(Room.UIdArr[i]).RoleName;
                 roleActor.RoleState.pos = roleActor.Body.Position.ToNetVector2();
                 roleActor.RoleState.dir = new Protocol.Body.NetVector2();
+                //通过这个方法来赋值roleActor.RoleState.id
+                roleActor.Start();
             }
 
 
@@ -46,10 +52,40 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                     roleStates = roleActorList.Select(p=>p.RoleState).ToArray()
                 }
             });
+            //创建武器
+            SpawnWeapon(new WeaponObject[]{ 
+                new WeaponObject{ 
+                assetId=0,
+                pos= new Protocol.Body.NetVector2(0, 0),
+                },
+               new WeaponObject{
+                assetId=1,
+                pos= new Protocol.Body.NetVector2(1, 3),
+                }
+            });
 
             Task.Run(FightTask);
         }
+        void SpawnWeapon(params WeaponObject[] weaponObject)
+        {
+            foreach (WeaponObject weapon in weaponObject)
+            {
+                WeaponActor weaponActor = gameWorld.Create<WeaponActor>(new Microsoft.Xna.Framework.Vector2(3,3));
+                weaponActor.Id=YitIdHelper.NextId();
+                weaponDic.Add(weaponActor.Id, weaponActor);
+                weaponActor.UpdateWeapon(weapon);
+                weaponActor.Start();
+            }
+            Broadcast(new Protocol.Msg
+            {
 
+                cmd = Protocol.CMD.NtfSpawnWeapon,
+                ntfSpawnWeapon = new NtfSpawnWeapon
+                {
+                    weaponObjectArr = weaponObject
+                }
+            });
+        }
         void FightTask()
         {
             int delta = 33;
@@ -110,9 +146,9 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         {
             return roleActorList.Select(v => v.RoleState).ToArray();
         }
-        //public WeaponObject[] GetWeaponObjectArr()
-        //{
-        //    re
-        //}
+        public WeaponObject[] GetWeaponObjectArr()
+        {
+            return weaponDic.Values.Select( p =>p.WeaponObject ).ToArray();
+        }
     }
 }

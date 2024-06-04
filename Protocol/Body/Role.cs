@@ -63,23 +63,7 @@ namespace Protocol.Body
 
         public WeaponObject weaponObject;
     }
-    [Serializable]
-    public class WeaponObject : ActorObject
-    {
-        public int assetId;
-
-        public int damage;
-
-        public float rate;
-
-        public int magazinesCount;
-
-        public int maxMagazinesCount;
-
-        public int reserveMagazineCount;
-
-        public int maxReserveMagazineCount;
-    }
+    
 
     [Serializable]
     public class NtfSpawnRole

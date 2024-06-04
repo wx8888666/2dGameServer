@@ -8,6 +8,7 @@ namespace _2DSurviveGameServer._02Sys.Room
 {
     public class RoomSys:SysRoot<RoomSys>
     {
+        //通过roomid来存放不同的id
         Dictionary<long, GameRoom> gameRoomDic;
 
         public override void Init()

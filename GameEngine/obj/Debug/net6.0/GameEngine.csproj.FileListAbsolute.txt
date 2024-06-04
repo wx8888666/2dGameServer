@@ -22,3 +22,4 @@ F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\GameEngine\obj\Debug\net
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\GameEngine\obj\Debug\net6.0\refint\GameEngine.dll
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\GameEngine\obj\Debug\net6.0\GameEngine.pdb
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\GameEngine\obj\Debug\net6.0\ref\GameEngine.dll
+F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\GameEngine\obj\Debug\net6.0\GameEngine.sourcelink.json

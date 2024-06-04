@@ -6,6 +6,8 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
 {
     public class RoleActor : Actor
     {
+        //为什么有RoleState这个类呢？是因为服务端与客户端的类不是一样的，要把服务端
+        //的一个类放到客户端上，那么就可以使用Rolestate来充当客户端上的。从而达到同步的状态
         public RoleState RoleState { get; set; } = new RoleState();
         public bool isStateChanged { get; set; } = false;
 
@@ -15,6 +17,8 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
 
         public override void Start()
         {
+            
+            RoleState.id=this.Id;
         }
 
         public override void Update()

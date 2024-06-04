@@ -35,6 +35,7 @@ namespace Protocol
         public RspFriends rspFriedns;
         public ReqAddFriend reqAddFriend;
         public ReqDeleFriend reqDeleFriend;
+        public NtfSpawnWeapon ntfSpawnWeapon;
     }
 
 }

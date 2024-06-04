@@ -17,6 +17,8 @@ namespace GameEngine
 
     public abstract class Actor : IActor
     {
+        public long Id {get;set;}
+
         public Body Body {  get; set; }
 
         public void ApplyLinearImpulse(Vector2 dir,float f)
