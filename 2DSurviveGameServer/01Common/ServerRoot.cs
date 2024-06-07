@@ -39,6 +39,7 @@ namespace _2DSurviveGameServer._01Common
             GameTaskSys.Instance.Init();
             ReconnectSys.Instance.Init();
             FriendsSys.Instance.Init();
+            ChatSys.Instance.Init();
         }
 
         public void Update()

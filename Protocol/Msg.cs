@@ -36,6 +36,10 @@ namespace Protocol
         public ReqAddFriend reqAddFriend;
         public ReqDeleFriend reqDeleFriend;
         public NtfSpawnWeapon ntfSpawnWeapon;
+        public ChatMessage chatMessage;
+        public RspChatMessage rspChatMessage;
+        public UserOnline userOnline;
+        public ReqChatHistory reqChatHistory;
     }
 
 }

@@ -107,5 +107,15 @@ namespace Protocol.Body
         public long UId;
         public long FriendUId;
     }
-
+    [Serializable]
+    public class UserOnline
+    {
+        public long UId;
+    }
+    [Serializable]
+    public class ReqChatHistory
+    {
+        public long uId;
+        public long friendUId;
+    }
 }

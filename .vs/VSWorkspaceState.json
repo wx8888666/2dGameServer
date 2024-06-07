@@ -5,7 +5,10 @@
     "\\2DSurviveGameServer\\01Common",
     "\\2DSurviveGameServer\\02Sys",
     "\\2DSurviveGameServer\\02Sys\\Room",
-    "\\2DSurviveGameServer\\03Svc"
+    "\\2DSurviveGameServer\\02Sys\\Room\\FSM",
+    "\\2DSurviveGameServer\\03Svc",
+    "\\Protocol",
+    "\\Protocol\\Body"
   ],
   "SelectedNode": "\\2DSurviveGameServer.sln",
   "PreviewInSolutionExplorer": false

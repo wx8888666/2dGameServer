@@ -12,6 +12,7 @@ namespace _2DSurviveGameServer._03Svc
         Dictionary<long, ServerSession> uidSessionDic;//玩家UID对应连接SID
         Dictionary<long, ClientStateEnum> uidClientStateDic;
         Dictionary<long, Friends[]> uidFriendsList;
+        Dictionary<Tuple<long, long>, RspChatMessage> ChatList;
         public override void Init()
         {
             base.Init();
@@ -20,6 +21,7 @@ namespace _2DSurviveGameServer._03Svc
             uidSessionDic = new Dictionary<long, ServerSession>();
             uidClientStateDic = new Dictionary<long, ClientStateEnum>();
             uidFriendsList = new Dictionary<long, Friends[]>();
+            ChatList=new Dictionary<Tuple<long, long>, RspChatMessage>();
         }
 
 
@@ -111,6 +113,17 @@ namespace _2DSurviveGameServer._03Svc
             uidSessionDic.TryGetValue(uid, out ServerSession session);
             return session;
         }
+        public RspChatMessage GetChatList(long uid, long frienduid)
+        {
+            var key = CreateChatKey(uid, frienduid);
+            ChatList.TryGetValue(key, out RspChatMessage chatlist);
+            return chatlist;
+        }
+        public void AddChatList(long uid, long frienduid, RspChatMessage rspChatMessages)
+        {
+            var key = CreateChatKey(uid, frienduid);
+            ChatList[key] = rspChatMessages;
+        }
 
         public void UpdateClientState(long uid,ClientStateEnum stateEnum)
         {
@@ -148,7 +161,11 @@ namespace _2DSurviveGameServer._03Svc
 
             return new Friends[0];
         }
-
+        private Tuple<long, long> CreateChatKey(long uid, long frienduid)
+        {
+            // 使用排序来生成有序键值对
+            return uid < frienduid ? Tuple.Create(uid, frienduid) : Tuple.Create(frienduid, uid);
+        }
 
     }
 

@@ -41,5 +41,9 @@ namespace Protocol
         ReqAddFriend,
         ReqDeleFriend,
         NtfSpawnWeapon,
+        ChatMessage,
+        RspChatMessage,
+        UserOnline,
+        ReqChatHistory,
     }
 }
