@@ -40,6 +40,12 @@ namespace Protocol
         public RspChatMessage rspChatMessage;
         public UserOnline userOnline;
         public ReqChatHistory reqChatHistory;
+        public ReqAcceptFriend reqAcceptFriend;
+        public ReqRejectFriend reqRejectFriend;
+        public FriendRequestNotification friendRequestNotification;
+        public FriendRequestAcceptedNotification friendRequestAcceptedNotification;
+        public ReqGetFriendRequests reqGetFriendRequests;
+        public RspGetFriendRequests rspGetFriendRequests;
     }
 
 }

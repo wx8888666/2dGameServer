@@ -20,10 +20,6 @@ F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netst
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netstandard2.0\Protocol.pdb
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netstandard2.0\Kcp.dll
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netstandard2.0\KCPNet.dll
-F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netstandard2.0\System.Memory.dll
-F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netstandard2.0\System.Numerics.Vectors.dll
-F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll
-F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netstandard2.0\System.Buffers.dll
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netstandard2.0\Protocol.csproj.AssemblyReference.cache
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netstandard2.0\Protocol.GeneratedMSBuildEditorConfig.editorconfig
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netstandard2.0\Protocol.AssemblyInfoInputs.cache
@@ -33,3 +29,7 @@ F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netst
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netstandard2.0\Protocol.dll
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netstandard2.0\Protocol.pdb
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\obj\Debug\netstandard2.0\Protocol.sourcelink.json
+F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netstandard2.0\System.Memory.dll
+F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netstandard2.0\System.Numerics.Vectors.dll
+F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll
+F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\Protocol\bin\Debug\netstandard2.0\System.Buffers.dll

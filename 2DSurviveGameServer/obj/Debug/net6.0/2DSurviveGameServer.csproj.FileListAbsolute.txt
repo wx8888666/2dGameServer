@@ -207,3 +207,4 @@ F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\obj\
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\obj\Debug\net6.0\2DSurviveGameServer.genruntimeconfig.cache
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\obj\Debug\net6.0\ref\2DSurviveGameServer.dll
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\obj\Debug\net6.0\2DSurviveGameServer.sourcelink.json
+F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\bin\Debug\net6.0\Oscar.Data.SqlClient.dll

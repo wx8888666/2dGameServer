@@ -45,5 +45,11 @@ namespace Protocol
         RspChatMessage,
         UserOnline,
         ReqChatHistory,
-    }
+        ReqAcceptFriend,
+        ReqRejectFriend,
+        FriendRequestNotification,
+        FriendRequestAcceptedNotification,
+        ReqGetFriendRequests,
+        RspGetFriendRequests,
+}
 }

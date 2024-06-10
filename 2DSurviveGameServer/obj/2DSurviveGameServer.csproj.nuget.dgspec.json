@@ -55,7 +55,7 @@
           "dependencies": {
             "SqlSugarCore": {
               "target": "Package",
-              "version": "[5.1.4.142, )"
+              "version": "[5.1.4.158, )"
             },
             "Yitter.IdGenerator": {
               "target": "Package",

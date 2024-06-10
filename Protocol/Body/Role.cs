@@ -118,4 +118,44 @@ namespace Protocol.Body
         public long uId;
         public long friendUId;
     }
+    //好友系统优化
+    [Serializable]
+    public class ReqAcceptFriend
+    {
+        public long RequestId;
+    }
+    [Serializable]
+    public class ReqRejectFriend
+    {
+        public long RequestId;
+    }
+    [Serializable]
+    public class FriendRequestNotification
+    {
+        public long SenderId;
+    }
+    [Serializable]
+    public class FriendRequestAcceptedNotification
+    {
+        public long ReceiverId;
+    }
+    [Serializable]
+    public class ReqGetFriendRequests
+    {
+        public long UserId;
+    }
+    [Serializable]
+    public class FriendRequestDTO
+    {
+        public long Id { get; set; }          // 请求ID
+        public long SenderId { get; set; }    // 发送者ID
+        public long ReceiverId { get; set; }  // 接收者ID
+        public string Status { get; set; }    // 请求状态
+        public DateTime Timestamp { get; set; }  // 时间戳
+    }
+    [Serializable]
+    public class RspGetFriendRequests
+    {
+        public List<FriendRequestDTO> FriendRequests;
+    }
 }

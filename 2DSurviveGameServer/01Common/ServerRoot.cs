@@ -7,6 +7,7 @@ using PEUtils;
 using Protocol.DBModel;
 using SqlSugar;
 using Yitter.IdGenerator;
+using static _2DSurviveGameServer._01Common.Friendrequest;
 
 namespace _2DSurviveGameServer._01Common
 {
@@ -25,6 +26,8 @@ namespace _2DSurviveGameServer._01Common
             SqlSugarHelper.Db.CodeFirst.InitTables<Account>();
             SqlSugarHelper.Db.CodeFirst.InitTables<User>();
             SqlSugarHelper.Db.CodeFirst.InitTables<Friends>();
+            SqlSugarHelper.Db.CodeFirst.InitTables<FriendRequests>();
+            //SqlSugarHelper.Db.CodeFirst.InitTables<Notifications>();
 
             NetSvc.Instance.Init();
             CacheSvc.Instance.Init();

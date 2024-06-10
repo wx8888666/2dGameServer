@@ -12,4 +12,5 @@ namespace Protocol.DBModel
         public string roleName { get; set; }
         public string Head { get; set; }
     }
+
 }
