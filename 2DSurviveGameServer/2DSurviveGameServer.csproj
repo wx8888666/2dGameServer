@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <PackageReference Include="SqlSugarCore" Version="5.1.4.158" />
+    <PackageReference Include="StackExchange.Redis" Version="2.7.33" />
     <PackageReference Include="Yitter.IdGenerator" Version="1.0.14" />
   </ItemGroup>
 

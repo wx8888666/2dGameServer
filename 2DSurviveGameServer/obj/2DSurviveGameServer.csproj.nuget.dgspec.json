@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[5.1.4.158, )"
             },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.7.33, )"
+            },
             "Yitter.IdGenerator": {
               "target": "Package",
               "version": "[1.0.14, )"
