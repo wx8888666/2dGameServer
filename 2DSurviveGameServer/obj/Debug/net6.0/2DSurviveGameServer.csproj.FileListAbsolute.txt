@@ -210,3 +210,4 @@ F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\obj\
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\bin\Debug\net6.0\Oscar.Data.SqlClient.dll
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\bin\Debug\net6.0\StackExchange.Redis.dll
+F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\bin\Debug\net6.0\data\tasks.json

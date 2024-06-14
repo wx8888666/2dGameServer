@@ -158,4 +158,5 @@ namespace Protocol.Body
     {
         public List<FriendRequestDTO> FriendRequests;
     }
+    
 }

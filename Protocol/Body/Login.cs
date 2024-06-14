@@ -49,16 +49,24 @@ namespace Protocol.Body
         public string Error;
     }
     [Serializable]
-    public class GTask    
+    public class UserTask
     {
-        public string Name;
-        public string Task;
-        public bool Reward;
+        public string Description { get; set; }
+        public string Reward { get; set; }
+        public int RewardNumber { get; set; }
+        public string Condition { get; set; }
+        public bool IsCompleted { get; set; }
+    }
+    [Serializable]
+    public class ReqTask
+    {
+        public long uid{ get; set; }
     }
     [Serializable]
     public class RspTask
     {
         
-        public GTask[] tasks;
+        public UserTask[] UserTask { get; set; }
     }
+
 }

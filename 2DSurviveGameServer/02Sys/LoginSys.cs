@@ -68,26 +68,6 @@ namespace _2DSurviveGameServer._02Sys
             });
         }
         //新增任务发送
-        void SendTasksToClient(MsgPack pack)
-        {
-            // 获取任务列表
-            List<GameTask> gameTasks = GameTaskSys.Instance.GetTasks();
-
-            // 初始化RspTask并转换GameTask到GTask的数组
-            RspTask rspTask = new RspTask();
-            rspTask.tasks = gameTasks.Select(v => new GTask
-            {
-                Name = v.Name,
-                Task = v.Task,
-                Reward = v.Reward
-            }).ToArray(); // 使用LINQ Select转换并转为数组
-
-            // 发送消息给客户端
-            pack.session.SendMsg(new Protocol.Msg
-            {
-                cmd = Protocol.CMD.RspTask,
-                rspTask = rspTask,
-            });
-        }
+        
     }
 }

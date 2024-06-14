@@ -12,6 +12,7 @@ namespace _2DSurviveGameServer._03Svc
         Dictionary<long, ServerSession> uidSessionDic;//玩家UID对应连接SID
         Dictionary<long, ClientStateEnum> uidClientStateDic;
         Dictionary<long, Friends[]> uidFriendsList;
+        //通过建立一个元组来实现固定2个uid对话消息的查询
         Dictionary<Tuple<long, long>, RspChatMessage> ChatList;
         public override void Init()
         {

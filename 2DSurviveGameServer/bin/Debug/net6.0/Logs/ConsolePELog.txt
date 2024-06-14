@@ -1,8 +1,14 @@
-[L]# 03:33:41--930  ThreadID:1 >> Server Start...
-[L]# 03:33:45--569  ThreadID:7 >> Client Connected sid:1
-[L]# 03:33:45--726  ThreadID:24 >> Client Connected sid:2
-[L]# 03:33:48--863  ThreadID:7 >> Client Connected sid:3
-[L]# 03:36:54--970  ThreadID:8 >> Client Connected sid:4
-[L]# 03:36:56--696  ThreadID:1 >> uid:9 变更连接 sid:4
-[L]# 03:55:56--400  ThreadID:7 >> Client Connected sid:5
-[L]# 03:55:58--212  ThreadID:1 >> uid:8 变更连接 sid:5
+[L]# 02:48:14--383  ThreadID:1 >> Server Start...
+[L]# 02:49:04--179  ThreadID:7 >> Client Connected sid:1
+[L]# 02:50:16--567  ThreadID:7 >> Client Connected sid:2
+[L]# 02:50:17--657  ThreadID:1 >> uid:8 变更连接 sid:2
+[L]# 02:50:50--794  ThreadID:9 >> Client Connected sid:3
+[L]# 02:50:51--761  ThreadID:1 >> uid:8 变更连接 sid:3
+[L]# 02:52:36--199  ThreadID:30 >> Client Connected sid:4
+[L]# 02:52:37--515  ThreadID:1 >> uid:8 变更连接 sid:4
+[L]# 02:53:27--517  ThreadID:31 >> Client Connected sid:5
+[L]# 02:53:38--438  ThreadID:1 >> uid:8 变更连接 sid:5
+[L]# 02:54:24--400  ThreadID:43 >> Client Connected sid:6
+[L]# 02:54:46--492  ThreadID:38 >> Client Connected sid:7
+[L]# 02:55:01--356  ThreadID:41 >> Client Connected sid:8
+[L]# 02:55:02--791  ThreadID:1 >> uid:9 变更连接 sid:8

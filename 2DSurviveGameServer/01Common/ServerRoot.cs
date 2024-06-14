@@ -27,7 +27,9 @@ namespace _2DSurviveGameServer._01Common
             SqlSugarHelper.Db.CodeFirst.InitTables<User>();
             SqlSugarHelper.Db.CodeFirst.InitTables<Friends>();
             SqlSugarHelper.Db.CodeFirst.InitTables<FriendRequests>();
+            SqlSugarHelper.Db.CodeFirst.InitTables<TaskType>();
             //SqlSugarHelper.Db.CodeFirst.InitTables<Notifications>();
+          
 
             NetSvc.Instance.Init();
             CacheSvc.Instance.Init();
@@ -39,10 +41,11 @@ namespace _2DSurviveGameServer._01Common
             LobbySys.Instance.Init();
             RoomSys.Instance.Init();
             RegSys.Instance.Init();
-            GameTaskSys.Instance.Init();
             ReconnectSys.Instance.Init();
             FriendsSys.Instance.Init();
             ChatSys.Instance.Init();
+            TaskSvc.Instance.Init();
+            TaskSys.Instance.Init();
         }
 
         public void Update()

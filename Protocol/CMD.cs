@@ -35,6 +35,7 @@ namespace Protocol
         SndEnterRoom,
         ReqReg,
         RspReg,
+        ReqTask,
         RspTask,
         ReqFriends,
         RspFriedns,

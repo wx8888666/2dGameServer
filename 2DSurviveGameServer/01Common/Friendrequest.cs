@@ -37,5 +37,22 @@ namespace _2DSurviveGameServer._01Common
             [SugarColumn(ColumnDataType = "datetime", IsNullable = false)]
             public DateTime Timestamp { get; set; }
         }
+        [Serializable]
+        public class TaskType
+        {
+            [SugarColumn(IsPrimaryKey = true, IsIdentity = true)] // 使用 Sugar ORM 指定自增主键
+            public int Id { get; set; }
+
+            public string Description { get; set; }
+            public string Reward { get; set; }
+            public int RewardNumber { get; set; }
+            public string Condition { get; set; }
+
+            //public override string ToString()
+            //{
+            //    return $"Id: {Id}, Description: {Description}, Reward: {Reward} {RewardNumber}, Condition: {Condition}";
+            //}
+        }
+
     }
 }
