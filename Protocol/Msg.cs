@@ -1,5 +1,6 @@
 ﻿using PENet;
 using Protocol.Body;
+using Protocol.DBModel;
 using System;
 
 namespace Protocol
@@ -47,6 +48,8 @@ namespace Protocol
         public FriendRequestAcceptedNotification friendRequestAcceptedNotification;
         public ReqGetFriendRequests reqGetFriendRequests;
         public RspGetFriendRequests rspGetFriendRequests;
+        public ReqBag reqBag;
+        public RspBag rspBag;
     }
 
 }

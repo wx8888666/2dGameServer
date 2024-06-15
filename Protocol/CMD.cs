@@ -52,5 +52,7 @@ namespace Protocol
         FriendRequestAcceptedNotification,
         ReqGetFriendRequests,
         RspGetFriendRequests,
+        ReqBag,
+        RspBag,
 }
 }

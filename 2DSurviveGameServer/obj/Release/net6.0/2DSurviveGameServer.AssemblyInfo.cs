@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("2DSurviveGameServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e003ebd2da9c68a9bf38c97ab7b11af19a330efe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9fafeeda3552d6e5c17bd84dd6b79074b1594e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("2DSurviveGameServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("2DSurviveGameServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

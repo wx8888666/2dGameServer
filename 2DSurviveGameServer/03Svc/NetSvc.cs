@@ -2,6 +2,7 @@
 using PENet;
 using PEUtils;
 using Protocol;
+using System.Collections.Concurrent;
 
 namespace _2DSurviveGameServer._03Svc
 {
@@ -26,14 +27,14 @@ namespace _2DSurviveGameServer._03Svc
         int port = 18888;//服务端监听的端口号，一般是0到65535
         public static readonly string pkgque_lock = "pkgque_lock";//消息队列锁
         KCPNet<ServerSession, Msg> server;//服务端，与客户端的类似
-        Queue<MsgPack> msgPackQueue;//消息队列
+        ConcurrentQueue<MsgPack> msgPackQueue;//消息队列
         Dictionary<CMD, Action<MsgPack>> msgHandleDic;//消息处理事件字典
 
         public override void Init()
         {
             base.Init();
             server = new KCPNet<ServerSession, Msg>();
-            msgPackQueue = new Queue<MsgPack>();
+            msgPackQueue = new ConcurrentQueue<MsgPack>();
             msgHandleDic = new Dictionary<CMD, Action<MsgPack>>();
             //设置输出日志
             KCPTool.LogFunc = this.Log;
@@ -43,27 +44,38 @@ namespace _2DSurviveGameServer._03Svc
 
             server.StartAsServer(ip, port);//启动服务端
 
-
+            Task.Run(ProcessMessagesAsync);
 
         }
-
-
-        public override void Update()
+        private async Task ProcessMessagesAsync()
         {
-            base.Update();
-
-            //如果消息队列里有消息则进行处理（注意：这里为什么在Update里面还要使用while来处理呢？为什么客户端那边同样在Update里面而不使用while来处理呢？因为服务端需要处理很多客户端的消息，并且每个客户端有可能会发大量的消息过来，服务端就必须要能及时处理掉，否则就会出现客户端那边延迟高的现象，而客户端不用while的原因是因为客户端只用处理自己跟服务端的消息，一般来说消息量是很少的，直接使用update来驱动处理就ok）
-            while (msgPackQueue.Count > 0)
+            while (true)
             {
-                lock (pkgque_lock)
+                while (msgPackQueue.TryDequeue(out var pack))
                 {
-                    //从消息队列中取出一个消息包
-                    MsgPack pack = msgPackQueue.Dequeue();
-                    //进行处理
-                    HandleMsg(pack);
+                    // 使用线程池处理消息
+                    await Task.Run(() => HandleMsg(pack));
                 }
+                await Task.Delay(10); // 减少 CPU 占用
             }
         }
+
+        //public override void Update()
+        //{
+        //    base.Update();
+
+        //    //如果消息队列里有消息则进行处理（注意：这里为什么在Update里面还要使用while来处理呢？为什么客户端那边同样在Update里面而不使用while来处理呢？因为服务端需要处理很多客户端的消息，并且每个客户端有可能会发大量的消息过来，服务端就必须要能及时处理掉，否则就会出现客户端那边延迟高的现象，而客户端不用while的原因是因为客户端只用处理自己跟服务端的消息，一般来说消息量是很少的，直接使用update来驱动处理就ok）
+        //    while (msgPackQueue.Count > 0)
+        //    {
+        //        lock (pkgque_lock)
+        //        {
+        //            //从消息队列中取出一个消息包
+        //            MsgPack pack = msgPackQueue.Dequeue();
+        //            //进行处理
+        //            HandleMsg(pack);
+        //        }
+        //    }
+        //}
 
         /// <summary>
         /// 添加消息到消息队列
@@ -72,11 +84,9 @@ namespace _2DSurviveGameServer._03Svc
         /// <param name="msg"></param>
         public void AddMsgQueue(ServerSession session,Msg msg)
         {
-            lock (pkgque_lock)
-            {
+           
                 msgPackQueue.Enqueue(new MsgPack(session, msg));
-                //Monitor.Pulse(pkgque_lock);
-            }
+            
         }
 
         /// <summary>
