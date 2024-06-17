@@ -20,6 +20,7 @@ namespace Protocol.DBModel
     {
         public long UId { get; set;}
     }
+    [Serializable]
     public class RspBag
     {
         public Bag bag { get; set; }

@@ -47,6 +47,7 @@ namespace _2DSurviveGameServer._01Common
             ChatSys.Instance.Init();
             TaskSvc.Instance.Init();
             TaskSys.Instance.Init();
+            BagSys.Instance.Init();
         }
 
         public void Update()

@@ -32,8 +32,8 @@ namespace _2DSurviveGameServer._02Sys
                 newBag = new Bag
                 {
                     UId = req.UId,
-                    GoldCoinsNum = 0,
-                    MasonryNum = 0,
+                    GoldCoinsNum = 1,
+                    MasonryNum = 1,
                 };
 
                 SqlSugarHelper.Db.Insertable(newBag).ExecuteCommand();
