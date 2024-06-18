@@ -50,6 +50,7 @@ namespace Protocol
         public RspGetFriendRequests rspGetFriendRequests;
         public ReqBag reqBag;
         public RspBag rspBag;
+        public TaskChange taskChange;
     }
 
 }

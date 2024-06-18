@@ -54,5 +54,6 @@ namespace Protocol
         RspGetFriendRequests,
         ReqBag,
         RspBag,
-}
+        TaskChange,
+    }
 }

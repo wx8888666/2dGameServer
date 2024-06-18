@@ -2,8 +2,10 @@
 using _2DSurviveGameServer.Helpers;
 using Newtonsoft.Json;
 using Protocol.Body;
+using Protocol.DBModel;
 using StackExchange.Redis;
 using System.Text;
+using System.Threading.Tasks;
 using static _2DSurviveGameServer._01Common.Friendrequest;
 
 namespace _2DSurviveGameServer._03Svc
@@ -113,12 +115,92 @@ namespace _2DSurviveGameServer._03Svc
                 var task = userTasks.FirstOrDefault(t => t.Description == description);
                 if (task != null)
                 {
+                    //if (task.IsCompleted) return;
                     task.IsCompleted = isCompleted;
                     serializedTasks = JsonConvert.SerializeObject(userTasks);
                     redisDb.StringSet(userTasksKey, serializedTasks, TimeSpan.FromDays(1));
                     Console.WriteLine($"Task status updated: {task.Description} is now {(isCompleted ? "completed" : "not completed")}");
+
+                    // 查询该角色是否有背包数据
+                    var existingBag = SqlSugarHelper.Db.Queryable<Bag>().First(p => p.UId == userId);
+
+                    // 根据任务的奖励类型以及数量直接增加数据
+                    if (isCompleted && existingBag != null)
+                    {
+                        HandleTaskReward(existingBag, task);
+                    }
+                    // 如果不存在对应 UId 的 Bag 数据，创建一个新的 Bag 对象并插入数据库
+                    else if (isCompleted && existingBag == null)
+                    {
+                        CreateNewBagAndHandleReward(userId, task);
+                    }
                 }
             }
         }
+
+        private void HandleTaskReward(Bag existingBag, UserTask task)
+        {
+            // 处理任务奖励，根据奖励类型和数量增加到背包中
+            switch (task.Reward)
+            {
+                case "金币":
+                    existingBag.GoldCoinsNum += task.RewardNumber;
+                    break;
+                case "石材":
+                    existingBag.MasonryNum += task.RewardNumber;
+                    break;
+                case "灵气":
+                    existingBag.SpiritNum += task.RewardNumber;
+                    break;
+                case "爱心":
+                    existingBag.LoveNum += task.RewardNumber;
+                    break;
+                // 可以根据实际奖励类型继续扩展
+                default:
+                    // 其他奖励类型的处理逻辑
+                    break;
+            }
+
+            // 更新背包数据到数据库，确保提供了更新条件，防止错误
+            SqlSugarHelper.Db.Updateable(existingBag).Where(p => p.UId == existingBag.UId).ExecuteCommand();
+        }
+
+        private void CreateNewBagAndHandleReward(long userId, UserTask task)
+        {
+            // 创建新的背包数据对象
+            var newBag = new Bag
+            {
+                UId = userId,
+                GoldCoinsNum = 0,
+                MasonryNum = 0,
+                SpiritNum = 0,
+                LoveNum = 0,
+            };
+
+            // 根据任务的奖励类型和数量初始化
+            switch (task.Reward)
+            {
+                case "金币":
+                    newBag.GoldCoinsNum = task.RewardNumber;
+                    break;
+                case "石材":
+                    newBag.MasonryNum = task.RewardNumber;
+                    break;
+                case "灵气":
+                    newBag.SpiritNum = task.RewardNumber;
+                    break;
+                case "爱心":
+                    newBag.LoveNum = task.RewardNumber;
+                    break;
+                // 可以根据实际奖励类型继续扩展
+                default:
+                    // 其他奖励类型的初始化逻辑
+                    break;
+            }
+
+            // 插入新的背包数据到数据库
+            SqlSugarHelper.Db.Insertable(newBag).ExecuteCommand();
+        }
+
     }
 }

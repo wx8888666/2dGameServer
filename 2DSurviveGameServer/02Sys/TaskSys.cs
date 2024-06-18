@@ -2,6 +2,7 @@
 using _2DSurviveGameServer._03Svc;
 using _2DSurviveGameServer.Helpers;
 using Protocol.Body;
+using Protocol.DBModel;
 using static _2DSurviveGameServer._01Common.Friendrequest;
 
 namespace _2DSurviveGameServer._02Sys
@@ -12,6 +13,7 @@ namespace _2DSurviveGameServer._02Sys
         {
             base.Init();
             netSvc.AddMsgHandle(Protocol.CMD.ReqTask, ReqTask);
+            netSvc.AddMsgHandle(Protocol.CMD.TaskChange, TaskChange);
         }
         public override void Update()
         {
@@ -29,6 +31,11 @@ namespace _2DSurviveGameServer._02Sys
                     UserTask = Tasks.ToArray()
                 }
             });
+        }
+        void TaskChange(MsgPack pack)
+        {
+            TaskChange req = pack.msg.taskChange;
+            TaskSvc.Instance.UpdateTaskStatus(req.UId, req.description, req.isCompleted);
         }
         
 

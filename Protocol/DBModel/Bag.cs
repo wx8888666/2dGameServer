@@ -12,6 +12,8 @@ namespace Protocol.DBModel
         public int GoldCoinsNum { get; set; }
 
         public int MasonryNum { get; set; }
+        public int SpiritNum { get; set; }
+        public int LoveNum { get; set; }
 
     }
     
@@ -24,5 +26,12 @@ namespace Protocol.DBModel
     public class RspBag
     {
         public Bag bag { get; set; }
+    }
+    [Serializable]
+    public class TaskChange
+    {
+        public long UId { get; set; }
+        public string description { get; set; }
+        public bool isCompleted { get; set; }
     }
 }
