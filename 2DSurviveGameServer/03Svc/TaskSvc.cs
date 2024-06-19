@@ -21,7 +21,7 @@ namespace _2DSurviveGameServer._03Svc
         {
             if (!File.Exists(filePath))
             {
-                Console.WriteLine("File not found.");
+                //Console.WriteLine("File not found.");
                 return;
             }
 
@@ -73,7 +73,7 @@ namespace _2DSurviveGameServer._03Svc
 
             if (redisDb.KeyExists(userTasksKey))
             {
-                Console.WriteLine("User already has tasks assigned.");
+                //Console.WriteLine("User already has tasks assigned.");
                 return;
             }
 
@@ -119,7 +119,7 @@ namespace _2DSurviveGameServer._03Svc
                     task.IsCompleted = isCompleted;
                     serializedTasks = JsonConvert.SerializeObject(userTasks);
                     redisDb.StringSet(userTasksKey, serializedTasks, TimeSpan.FromDays(1));
-                    Console.WriteLine($"Task status updated: {task.Description} is now {(isCompleted ? "completed" : "not completed")}");
+                    //Console.WriteLine($"Task status updated: {task.Description} is now {(isCompleted ? "completed" : "not completed")}");
 
                     // 查询该角色是否有背包数据
                     var existingBag = SqlSugarHelper.Db.Queryable<Bag>().First(p => p.UId == userId);
