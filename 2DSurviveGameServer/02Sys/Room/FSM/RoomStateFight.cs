@@ -88,7 +88,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         }
         void FightTask()
         {
-            int delta = 33;
+            int delta = 50;
             while(!cancellationTokenSource.IsCancellationRequested)
             {
                 Room.CheckDisconnected();
