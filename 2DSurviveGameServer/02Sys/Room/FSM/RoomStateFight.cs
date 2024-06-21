@@ -2,6 +2,7 @@
 using _2DSurviveGameServer._03Svc;
 using _2DSurviveGameServer.Helpers;
 using GameEngine;
+using Microsoft.Xna.Framework;
 using Protocol.Body;
 using Yitter.IdGenerator;
 
@@ -13,7 +14,8 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         List<RoleActor> roleActorList;
         CancellationTokenSource cancellationTokenSource;
         Dictionary<long, WeaponActor> weaponDic;
-
+        List<MonsterActor> monsterActorList;
+        static int Monsterid = 1;
         public RoomStateFight(GameRoom room) : base(room)
         {
         }
@@ -29,8 +31,10 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
             roleActorList = new List<RoleActor>();
             cancellationTokenSource = new CancellationTokenSource();
             weaponDic = new Dictionary<long, WeaponActor>();
+            monsterActorList = new List<MonsterActor>();
+            SpawnMonsters(5);
 
-            for(int i = 0;i<Room.UIdArr.Length;i++)
+            for (int i = 0;i<Room.UIdArr.Length;i++)
             {
                 RoleActor roleActor = gameWorld.Create<RoleActor>(new Microsoft.Xna.Framework.Vector2(1 + i, 1 + i));
                 roleActorList.Add(roleActor); 
@@ -66,6 +70,29 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
 
             Task.Run(FightTask);
         }
+        void SpawnMonsters(int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                MonsterActor monsterActor = gameWorld.Create<MonsterActor>(new Microsoft.Xna.Framework.Vector2(2 + i, 2 + i));
+                monsterActor.Id = Monsterid + i;
+                Monsterid ++;
+                monsterActor.MonsterState.monsterName = "Monster_" + i;
+                monsterActor.MonsterState.pos = monsterActor.Body.Position.ToNetVector2();
+                monsterActor.MonsterState.dir = new Protocol.Body.NetVector2();
+                monsterActor.Start();
+                monsterActorList.Add(monsterActor);
+            }
+
+            Broadcast(new Protocol.Msg
+            {
+                cmd = Protocol.CMD.NtfSpawnMonster,
+                ntfSpawnMonster = new Protocol.Body.NtfSpawnMonster
+                {
+                    monsterStates = monsterActorList.Select(p => p.MonsterState).ToArray()
+                }
+            });
+        }
         void SpawnWeapon(params WeaponObject[] weaponObject)
         {
             foreach (WeaponObject weapon in weaponObject)
@@ -89,17 +116,61 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         void FightTask()
         {
             int delta = 50;
-            while(!cancellationTokenSource.IsCancellationRequested)
+            
+            while (!cancellationTokenSource.IsCancellationRequested)
             {
                 Room.CheckDisconnected();
 
                 gameWorld.Update(delta);
-
+                UpdateMonsters();
                 BroadcastRole();
+                BroadcastMonsters();
 
                 Task.Delay(delta).Wait();
             }
+            void UpdateMonsters()
+            {
+                foreach (var monster in monsterActorList)
+                {
+                   
+                    foreach (var player in roleActorList)
+                    {
+                        if (Vector2.Distance(monster.Body.Position, player.Body.Position) < 5.0f) // Assuming 5.0 is the chase range
+                        {
+                            //Vector2 pathToPlayer = monster.AStarPathfinding(monster.Body.Position, player.Body.Position);
+                            //monster.MoveToTargetPosition();
+                            //monster.isStateChanged = true;
+                            //这里通过A*算法来实现
+                            break;
+                        }
+                    }
+                    monster.Update();
+                }
+            }
+            void BroadcastMonsters()
+            {
+                List<MonsterState> monsterStateList = new List<MonsterState>();
+                foreach (var v in monsterActorList)
+                {
+                    if (v.isStateChanged)
+                    {
+                        monsterStateList.Add(v.MonsterState);
+                        v.isStateChanged = false;
+                    }
+                }
 
+                if (monsterStateList.Count > 0)
+                {
+                    Broadcast(new Protocol.Msg
+                    {
+                        cmd = Protocol.CMD.NtfSyncMonster,
+                        ntfSyncMonster = new Protocol.Body.NtfSyncMonster
+                        {
+                            monsterStates = monsterStateList.ToArray()
+                        }
+                    });
+                }
+            }
             void BroadcastRole()
             {
                 List<RoleState> roleStateList = new List<RoleState>();
@@ -142,6 +213,10 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         {
             roleActorList[posIndex].UpdateState(roleState);
         }
+        public void UpdateMonster(int monsterIndex, MonsterState monsterState)
+        {
+            monsterActorList[monsterIndex].UpdateState(monsterState);
+        }
         public  RoleState[] GetRoleState()
         {
             return roleActorList.Select(v => v.RoleState).ToArray();
@@ -149,6 +224,10 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         public WeaponObject[] GetWeaponObjectArr()
         {
             return weaponDic.Values.Select( p =>p.WeaponObject ).ToArray();
+        }
+        public MonsterState[] GetMonsterObjectArr()
+        {
+            return monsterActorList.Select(v=>v.MonsterState).ToArray();
         }
     }
 }

@@ -158,5 +158,25 @@ namespace Protocol.Body
     {
         public List<FriendRequestDTO> FriendRequests;
     }
-    
+    //怪物
+    [Serializable]
+    public class MonsterState
+    {
+        public long id { get; set; }
+        public NetVector2 pos { get; set; }
+        public NetVector2 dir { get; set; }
+        public string monsterName { get; set; }
+    }
+    [Serializable]
+    public class NtfSpawnMonster
+    {
+        public MonsterState[] monsterStates;
+    }
+
+    [Serializable]
+    public class NtfSyncMonster
+    {
+        public MonsterState[] monsterStates;
+    }
+
 }

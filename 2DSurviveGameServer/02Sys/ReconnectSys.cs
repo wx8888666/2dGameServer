@@ -135,6 +135,7 @@ namespace _2DSurviveGameServer._02Sys
                                 userArr = userList.ToArray(),
                                 roleStateArr = roomStateFight.GetRoleState(),
                                 weaponObjectArr=roomStateFight.GetWeaponObjectArr(),
+                                monsterStateArr=roomStateFight.GetMonsterObjectArr(),
                             }
                         }
                     }) ; 

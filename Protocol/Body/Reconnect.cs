@@ -61,5 +61,6 @@ namespace Protocol.Body
         public User[] userArr;
         public RoleState[] roleStateArr;
         public WeaponObject[] weaponObjectArr;
+        public MonsterState[] monsterStateArr;
     }
 }

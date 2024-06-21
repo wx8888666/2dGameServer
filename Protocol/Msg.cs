@@ -51,6 +51,8 @@ namespace Protocol
         public ReqBag reqBag;
         public RspBag rspBag;
         public TaskChange taskChange;
+        public NtfSpawnMonster ntfSpawnMonster;
+        public NtfSyncMonster ntfSyncMonster;
     }
 
 }
