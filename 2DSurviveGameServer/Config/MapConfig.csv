@@ -1,0 +1,3 @@
+﻿Id,RoleBornPoints,EnemyBornPoints,EnemySpawnTime,EnemySpawnMaxCount,SupplySpawnTime,SupplySpawnMaxCount
+0,(0|0);(1|1),(75);(7|7);(7|9);(0|5);(0|7);(0|9);(3|5);(3|7);(3|9);(9|5);(9|7);(9|9),2,10,5,5
+

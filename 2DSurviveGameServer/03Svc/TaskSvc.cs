@@ -55,7 +55,7 @@ namespace _2DSurviveGameServer._03Svc
         {
             base.Init();
             // Assuming "path/to/tasks.json" is the relative path to your tasks file.
-            string filePath = "data/tasks.json";
+            string filePath = "Config/tasks.json";
             InsertTasksFromFile(filePath);
            
         }

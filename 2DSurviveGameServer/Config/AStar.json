@@ -1,0 +1,2048 @@
+{
+  "NodeDiameter": 1.0,
+  "NodeRadius": 0.5,
+  "MapW": 20,
+  "MapH": 20,
+  "Nodes": [
+    [
+      {
+        "x": -9.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": -9.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": -8.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": -8.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": -7.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": -7.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": -6.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": -2.5,
+        "canWalk": false
+      },
+      {
+        "x": -6.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": 1.5,
+        "canWalk": false
+      },
+      {
+        "x": -6.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": -6.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": -5.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": -5.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": -4.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": 3.5,
+        "canWalk": false
+      },
+      {
+        "x": -4.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": -4.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": -3.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": -2.5,
+        "canWalk": false
+      },
+      {
+        "x": -3.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": -3.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": -2.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": -2.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": -1.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": -1.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": -0.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": -0.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": 0.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": 0.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": 1.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": -3.5,
+        "canWalk": false
+      },
+      {
+        "x": 1.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": 1.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": 2.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": 2.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": 3.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": 3.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": 4.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": 4.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": 5.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": -2.5,
+        "canWalk": false
+      },
+      {
+        "x": 5.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": 5.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": 6.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": 6.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": 7.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": -0.5,
+        "canWalk": false
+      },
+      {
+        "x": 7.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": 7.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": 8.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": 8.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ],
+    [
+      {
+        "x": 9.5,
+        "y": -9.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": -8.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": -7.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": -6.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": -5.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": -4.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": -3.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": -2.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": -1.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": -0.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": 0.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": 1.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": 2.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": 3.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": 4.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": 5.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": 6.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": 7.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": 8.5,
+        "canWalk": true
+      },
+      {
+        "x": 9.5,
+        "y": 9.5,
+        "canWalk": true
+      }
+    ]
+  ]
+}

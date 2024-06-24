@@ -1,8 +1,12 @@
-﻿using _2DSurviveGameServer._02Sys.Room.Actors;
+﻿using _2DSurviveGameServer._01Common.Astar;
+using _2DSurviveGameServer._02Sys.Room.Actors;
 using _2DSurviveGameServer._03Svc;
 using _2DSurviveGameServer.Helpers;
 using GameEngine;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Protocol.Body;
+using Protocol.DBModel;
 using Yitter.IdGenerator;
 
 namespace _2DSurviveGameServer._02Sys.Room.FSM
@@ -10,9 +14,13 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
     public class RoomStateFight : RoomStateBase
     {
         GameWorld gameWorld;
-        List<RoleActor> roleActorList;
+        public  List<RoleActor> roleActorList;
         CancellationTokenSource cancellationTokenSource;
         Dictionary<long, WeaponActor> weaponDic;
+        public List<EnemyEntity> enemyList; // 添加敌人列表
+        private MapConfigModel mapCfg;
+        private JObject mapJo;
+        private AStarMap map;
 
         public RoomStateFight(GameRoom room) : base(room)
         {
@@ -29,8 +37,12 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
             roleActorList = new List<RoleActor>();
             cancellationTokenSource = new CancellationTokenSource();
             weaponDic = new Dictionary<long, WeaponActor>();
+            enemyList = new List<EnemyEntity>();
+            mapJo = JObject.Parse(File.ReadAllText(AppContext.BaseDirectory + "Config/AStar.json"));
+            mapCfg= ResSvc.Instance.GetMapConfigById(0);
+            map= new AStarMap(mapJo);
 
-            for(int i = 0;i<Room.UIdArr.Length;i++)
+            for (int i = 0;i<Room.UIdArr.Length;i++)
             {
                 RoleActor roleActor = gameWorld.Create<RoleActor>(new Microsoft.Xna.Framework.Vector2(1 + i, 1 + i));
                 roleActorList.Add(roleActor); 
@@ -63,7 +75,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 pos= new Protocol.Body.NetVector2(1, 3),
                 }
             });
-
+            SpawnEnemies();
             Task.Run(FightTask);
         }
         void SpawnWeapon(params WeaponObject[] weaponObject)
@@ -86,6 +98,25 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 }
             });
         }
+        void SpawnEnemies()
+        {
+            for (int i = 1; i < 5; i++) // 假设生成4个敌人
+            {
+                EnemyEntity enemy = gameWorld.Create<EnemyEntity>(new Microsoft.Xna.Framework.Vector2(5 + i, 5 + i));
+                enemy.Init(this, map, i, new EnemyState());
+                enemy.EnemyState.pos=enemy.Body.Position.ToNetVector2();
+                enemyList.Add(enemy);
+            }
+
+            Broadcast(new Protocol.Msg
+            {
+                cmd = Protocol.CMD.NtfSpawnEnemy,
+                ntfSpawnEnemy = new Protocol.Body.NtfSpawnEnemy
+                {
+                    enemyStates = enemyList.Select(e => e.EnemyState).ToArray()
+                }
+            });
+        }
         void FightTask()
         {
             int delta = 50;
@@ -96,6 +127,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 gameWorld.Update(delta);
 
                 BroadcastRole();
+                BroadcastEnemy();
 
                 Task.Delay(delta).Wait();
             }
@@ -125,10 +157,35 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 }
 
             }
-        }
-        
 
-        public override void Exit()
+        }
+        void BroadcastEnemy()
+        {
+            List<EnemyState> enemyStateList = new List<EnemyState>();
+            foreach (var e in enemyList)
+            {
+                if (e.isStateChanged)
+                {
+                    enemyStateList.Add(e.EnemyState);
+                    e.isStateChanged = false;
+                }
+            }
+
+            if (enemyStateList.Count > 0)
+            {
+                Broadcast(new Protocol.Msg
+                {
+                    cmd = Protocol.CMD.NtfSyncEnemy,
+                    ntfSyncEnemy = new Protocol.Body.NtfSyncEnemy
+                    {
+                        enemyStates = enemyStateList.ToArray()
+                    }
+                });
+            }
+        }
+    
+
+    public override void Exit()
         {
             cancellationTokenSource.Cancel();
         }

@@ -55,5 +55,8 @@ namespace Protocol
         ReqBag,
         RspBag,
         TaskChange,
+        NtfEnemySpawn,
+        NtfSpawnEnemy,
+        NtfSyncEnemy,
     }
 }
