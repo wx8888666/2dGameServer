@@ -6,7 +6,7 @@ namespace GameEngine
 {
     public class GameWorld
     {
-        World world;
+        public World world;
 
         public GameWorld()
         {
