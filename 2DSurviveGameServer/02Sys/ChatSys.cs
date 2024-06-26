@@ -85,8 +85,8 @@ namespace _2DSurviveGameServer._02Sys
             string chatKey = CreateChatKey(uid, friendUid);
 
             var chatMessages = redisDb.ListRange(chatKey)
-                                      .Select(value => DeserializeChatMessage(value))
-                                      .ToArray();
+                                .Select(value => DeserializeChatMessage(value))
+                                .ToArray();
 
             var session = CacheSvc.Instance.GetSession(uid);
             if (session != null && session.IsConnected())

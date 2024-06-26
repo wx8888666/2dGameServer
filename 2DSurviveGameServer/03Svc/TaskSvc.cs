@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using Protocol.Body;
 using Protocol.DBModel;
 using StackExchange.Redis;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using static _2DSurviveGameServer._01Common.Friendrequest;
@@ -115,7 +116,8 @@ namespace _2DSurviveGameServer._03Svc
                 var task = userTasks.FirstOrDefault(t => t.Description == description);
                 if (task != null)
                 {
-                    //if (task.IsCompleted) return;
+                    //当已经完成就直接退出
+                    if (task.IsCompleted) return;
                     task.IsCompleted = isCompleted;
                     serializedTasks = JsonConvert.SerializeObject(userTasks);
                     redisDb.StringSet(userTasksKey, serializedTasks, TimeSpan.FromDays(1));
@@ -201,6 +203,6 @@ namespace _2DSurviveGameServer._03Svc
             // 插入新的背包数据到数据库
             SqlSugarHelper.Db.Insertable(newBag).ExecuteCommand();
         }
-
+    
     }
 }
