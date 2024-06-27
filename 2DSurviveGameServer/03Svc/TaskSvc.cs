@@ -13,6 +13,7 @@ namespace _2DSurviveGameServer._03Svc
 {
     public class TaskSvc : SvcRoot<TaskSvc>
     {
+
         private readonly IDatabase redisDb;
         public TaskSvc()
         {
@@ -84,6 +85,7 @@ namespace _2DSurviveGameServer._03Svc
             {
                 Description = task.Description,
                 Reward = task.Reward,
+                Number = task.Number,
                 RewardNumber = task.RewardNumber,
                 Condition = task.Condition,
                 IsCompleted = false

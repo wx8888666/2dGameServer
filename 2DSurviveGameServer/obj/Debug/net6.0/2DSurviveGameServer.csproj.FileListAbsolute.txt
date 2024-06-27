@@ -212,3 +212,4 @@ F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\bin\
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\bin\Debug\net6.0\StackExchange.Redis.dll
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\bin\Debug\net6.0\data\tasks.json
 F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\bin\Debug\net6.0\01Common\Config\AStar.json
+F:\游戏源码\2DSurviveGameServer\2DSurviveGameServer\2DSurviveGameServer\bin\Debug\net6.0\Quartz.dll

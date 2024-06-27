@@ -53,6 +53,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.10.0, )"
+            },
             "SqlSugarCore": {
               "target": "Package",
               "version": "[5.1.4.158, )"

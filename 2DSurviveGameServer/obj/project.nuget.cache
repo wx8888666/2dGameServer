@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Mcatqd96IvzH4lGuZjJPCASbJBPPoG0p+2rCfZRtW9k/tEhu2hTtXyqOcEeM7dvPoq9SNDB+KeV/fXPgedWNFQ==",
+  "dgSpecHash": "dkgV+62wPHjmvG0MYwAldYxsPbqUHtWK67jxyzGUSUaA74/YwkLP8Vg15A5X/7nr5s1trZCSPLYQ4WEXu1MpOQ==",
   "success": true,
   "projectFilePath": "F:\\游戏源码\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\oracle.manageddataaccess.core\\3.21.100\\oracle.manageddataaccess.core.3.21.100.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\oscar.data.sqlclient\\4.0.4\\oscar.data.sqlclient.4.0.4.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\quartz\\3.10.0\\quartz.3.10.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
@@ -36,7 +37,7 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\sqlsugarcore.kdbndp\\9.3.6.411\\sqlsugarcore.kdbndp.9.3.6.411.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\stackexchange.redis\\2.7.33\\stackexchange.redis.2.7.33.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.data.common\\4.3.0\\system.data.common.4.3.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.diagnostics.performancecounter\\6.0.1\\system.diagnostics.performancecounter.6.0.1.nupkg.sha512",

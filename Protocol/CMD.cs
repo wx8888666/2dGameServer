@@ -57,5 +57,6 @@ namespace Protocol
         TaskChange,
         NtfSyncMonster,
         NtfSpawnMonster,
+        ReqChangeTaskDatas,
     }
 }

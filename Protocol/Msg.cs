@@ -53,6 +53,7 @@ namespace Protocol
         public TaskChange taskChange;
         public NtfSpawnMonster ntfSpawnMonster;
         public NtfSyncMonster ntfSyncMonster;
+        public ReqChangeTaskDatas reqChangeTaskDatas;
     }
 
 }

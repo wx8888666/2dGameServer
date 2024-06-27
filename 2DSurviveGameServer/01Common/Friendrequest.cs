@@ -45,8 +45,10 @@ namespace _2DSurviveGameServer._01Common
 
             public string Description { get; set; }
             public string Reward { get; set; }
+            public int Number { get; set; }
             public int RewardNumber { get; set; }
             public string Condition { get; set; }
+
 
             //public override string ToString()
             //{

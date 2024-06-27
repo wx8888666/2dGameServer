@@ -29,8 +29,9 @@ namespace _2DSurviveGameServer._01Common
             SqlSugarHelper.Db.CodeFirst.InitTables<FriendRequests>();
             SqlSugarHelper.Db.CodeFirst.InitTables<TaskType>();
             SqlSugarHelper.Db.CodeFirst.InitTables<Bag>();
+            SqlSugarHelper.Db.CodeFirst.InitTables<TaskDatas>();
             //SqlSugarHelper.Db.CodeFirst.InitTables<Notifications>();
-          
+
 
             NetSvc.Instance.Init();
             CacheSvc.Instance.Init();

@@ -1,10 +1,13 @@
-[L]# 03:00:12--490  ThreadID:1 >> Server Start...
-[L]# 03:00:16--618  ThreadID:7 >> Client Connected sid:1
-[L]# 03:00:18--558  ThreadID:7 >> Client Connected sid:2
-[L]# 03:00:20--029  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：1
-[L]# 03:00:22--479  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：2
-[L]# 03:00:22--488  ThreadID:1 >> id为562053203804165的房间现在进入Confirm状态
-[L]# 03:00:22--491  ThreadID:1 >> 创建了一个房间，当前房间数量：1
-[L]# 03:00:22--491  ThreadID:1 >> 匹配成功，当前匹配队列人数：0
-[L]# 03:00:23--888  ThreadID:1 >> id为562053203804165的房间现在进入Load状态
-[L]# 03:00:25--058  ThreadID:1 >> id为562053203804165的房间现在进入Fight状态
+[L]# 04:32:03--908  ThreadID:1 >> Server Start...
+[L]# 04:32:08--612  ThreadID:8 >> Client Connected sid:1
+[L]# 04:33:22--425  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：1
+[L]# 04:33:29--771  ThreadID:7 >> Client Connected sid:2
+[L]# 04:33:31--420  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：2
+[L]# 04:33:31--426  ThreadID:1 >> id为562429990506501的房间现在进入Confirm状态
+[L]# 04:33:31--428  ThreadID:1 >> 创建了一个房间，当前房间数量：1
+[L]# 04:33:31--428  ThreadID:1 >> 匹配成功，当前匹配队列人数：0
+[L]# 04:33:33--109  ThreadID:1 >> id为562429990506501的房间现在进入Load状态
+[L]# 04:33:43--504  ThreadID:7 >> Client Connected sid:3
+[L]# 04:33:45--959  ThreadID:7 >> Client Connected sid:4
+[L]# 04:33:47--165  ThreadID:1 >> uid:9 变更连接 sid:4
+[L]# 04:33:48--358  ThreadID:1 >> id为562429990506501的房间现在进入Fight状态

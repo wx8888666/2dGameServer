@@ -1,5 +1,7 @@
 using _2DSurviveGameServer._01Common;
 using Microsoft.Extensions.FileProviders;
+using Quartz.Impl;
+using Quartz;
 using System.Diagnostics;
 
 namespace _2DSurviveGameServer
@@ -35,18 +37,36 @@ namespace _2DSurviveGameServer
 
 
             app.MapControllers();
-            //异步执行防止 while(true)执行不了
+            //异步执行防止 while(true)执行不了,不使用Run就是为了防止阻塞主逻辑；
             app.RunAsync();
 
             ServerRoot.Instance.Init();
+            StartQuartzScheduler().Wait();
 
-
-            while(true)
+            while (true)
             {
                 ServerRoot.Instance.Update();
 
                 Thread.Sleep(1);
             }
+        }
+        static async Task StartQuartzScheduler()
+        {
+            StdSchedulerFactory factory = new StdSchedulerFactory();
+            IScheduler scheduler = await factory.GetScheduler();
+            await scheduler.Start();
+
+            IJobDetail job = JobBuilder.Create<ResetDailyStatusJob>()
+                .WithIdentity("resetDailyStatusJob", "group1")
+                .Build();
+
+            ITrigger trigger = TriggerBuilder.Create()
+                .WithIdentity("dailyTrigger", "group1")
+                .StartNow()
+                .WithSchedule(CronScheduleBuilder.DailyAtHourAndMinute(0, 0))
+                .Build();
+
+            await scheduler.ScheduleJob(job, trigger);
         }
     }
 }

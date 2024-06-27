@@ -27,11 +27,5 @@ namespace Protocol.DBModel
     {
         public Bag bag { get; set; }
     }
-    [Serializable]
-    public class TaskChange
-    {
-        public long UId { get; set; }
-        public string description { get; set; }
-        public bool isCompleted { get; set; }
-    }
+ 
 }

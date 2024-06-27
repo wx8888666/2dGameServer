@@ -53,9 +53,11 @@ namespace Protocol.Body
     {
         public string Description { get; set; }
         public string Reward { get; set; }
+        public int Number { get; set; }
         public int RewardNumber { get; set; }
         public string Condition { get; set; }
         public bool IsCompleted { get; set; }
+
     }
     [Serializable]
     public class ReqTask

@@ -28,36 +28,42 @@
   {
     "Description": "每日登录",
     "Reward": "金币",
+    "Number": 0,
     "RewardNumber": 10,
     "Condition": "玩家每日登录即可获取奖励"
   },
   {
     "Description": "每日游戏",
     "Reward": "金币",
+    "Number": 1,
     "RewardNumber": 10,
     "Condition": "在本日参加一场游戏"
   },
   {
     "Description": "友情延续",
     "Reward": "金币",
+    "Number": 0,
     "RewardNumber": 1,
     "Condition": "与好友进行聊天"
   },
   {
     "Description": "坚持不懈",
     "Reward": "金币",
+    "Number": 7,
     "RewardNumber": 100,
     "Condition": "坚持登录7天"
   },
   {
     "Description": "奋勇杀敌",
     "Reward": "金币",
+    "Number": 10,
     "RewardNumber": 10,
     "Condition": "击杀敌人10"
   },
   {
     "Description": "战场名将",
     "Reward": "金币",
+    "Number": 10,
     "RewardNumber": 10,
     "Condition": "参见10场游戏"
   }
