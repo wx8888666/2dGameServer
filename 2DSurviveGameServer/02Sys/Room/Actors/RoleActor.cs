@@ -14,7 +14,10 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
         public override void OnDestory()
         {
         }
-
+        public  void EquipWeapon(WeaponObject weaponObject)
+        { 
+            RoleState.weaponObject = weaponObject;
+        }
         public override void Start()
         {
             

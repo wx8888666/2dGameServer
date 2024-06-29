@@ -27,4 +27,36 @@ namespace Protocol.Body
     {
         public WeaponObject[] weaponObjectArr;
     }
+    [Serializable]
+    public class ReqWeaponFire
+    {
+        public long uid;
+        public int roomId;
+        public int weaponId;
+        public NetVector2 startPos;
+        public NetVector2 endPos;
+    }
+    [Serializable]
+    public class RspWeaponFire
+    {
+        public bool isFireSuccess = false;//是否射击成功
+        public int magCount;//当前弹夹子弹数量
+        public int spareMagCount;//当前后备弹夹子弹数量
+        public NetVector2 startPos;
+        public NetVector2 endPos;
+    }
+    [Serializable]
+    public class ReqPickupWeapon
+    {
+        public long roomId;
+        public long uid; // 请求拾取武器的角色UID
+        public long weaponId; // 请求拾取的武器ID
+    }
+    [Serializable]
+    public class RspPickupWeapon
+    {
+        public bool isPickUpSuccess;
+        public long uid; // 拾取武器的角色UID
+        public int weaponId; // 被拾取的武器ID
+    }
 }

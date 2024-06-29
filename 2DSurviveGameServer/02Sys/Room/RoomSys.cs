@@ -20,6 +20,7 @@ namespace _2DSurviveGameServer._02Sys.Room
             netSvc.AddMsgHandle(CMD.SndLoadPrg, SndLoadPrg);
             netSvc.AddMsgHandle(CMD.SndRoleState, SndRoleState);
             netSvc.AddMsgHandle(CMD.SndEnterRoom, SndEnterRoom);
+            NetSvc.Instance.AddMsgHandle(Protocol.CMD.ReqPickupWeapon, ReqPickupWeapon);
         }
 
         public override void Update()
@@ -87,6 +88,14 @@ namespace _2DSurviveGameServer._02Sys.Room
                 room.SndEnterRoom(snd.uid);
             }
 
+        }
+        public void ReqPickupWeapon(MsgPack pack)
+        {
+           var req = pack.msg.reqPickupWeapon;
+            if (gameRoomDic.TryGetValue(req.roomId, out GameRoom room))
+            {
+                room.ReqPickupWeapon(req);
+            }
         }
     }
 }

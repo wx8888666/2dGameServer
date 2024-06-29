@@ -54,6 +54,8 @@ namespace Protocol
         public NtfSpawnMonster ntfSpawnMonster;
         public NtfSyncMonster ntfSyncMonster;
         public ReqChangeTaskDatas reqChangeTaskDatas;
+        public ReqPickupWeapon reqPickupWeapon;
+        public RspPickupWeapon rspPickupWeapon;
     }
 
 }

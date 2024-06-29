@@ -8,7 +8,9 @@
     "\\2DSurviveGameServer\\02Sys\\Room\\FSM",
     "\\2DSurviveGameServer\\03Svc",
     "\\2DSurviveGameServer\\Controllers",
-    "\\2DSurviveGameServer\\Helpers"
+    "\\2DSurviveGameServer\\Helpers",
+    "\\Protocol",
+    "\\Protocol\\DBModel"
   ],
   "SelectedNode": "\\2DSurviveGameServer.sln",
   "PreviewInSolutionExplorer": false

@@ -3,6 +3,7 @@ using _2DSurviveGameServer._03Svc;
 using PENet;
 using Protocol;
 using Protocol.Body;
+using System.Xml.Serialization;
 
 namespace _2DSurviveGameServer._02Sys.Room
 {
@@ -199,6 +200,16 @@ namespace _2DSurviveGameServer._02Sys.Room
         public void SndEnterRoom(long uid)
         {
             OnlineArr[GetPosIndex(uid)]=true;
+        }
+        public void ReqPickupWeapon(ReqPickupWeapon reqPickupWeapon)
+        {
+            if (currentRoomState == RoomStateEnum.Fight)
+            {
+                if (fsm[currentRoomState] is RoomStateFight state)
+                {
+                    state.HandlePickupWeaponRequest(reqPickupWeapon.uid, reqPickupWeapon.weaponId);
+                }
+            }
         }
     }
 }

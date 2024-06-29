@@ -58,5 +58,7 @@ namespace Protocol
         NtfSyncMonster,
         NtfSpawnMonster,
         ReqChangeTaskDatas,
+        ReqPickupWeapon,
+        RspPickupWeapon,
     }
 }

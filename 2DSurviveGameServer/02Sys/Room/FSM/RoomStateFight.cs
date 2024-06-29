@@ -197,7 +197,36 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
 
             }
         }
-        
+        // 处理拾取武器请求
+        public void HandlePickupWeaponRequest(long uid, long weaponId)
+        {
+            // 查找对应的玩家和武器
+            RoleActor player = roleActorList.FirstOrDefault(p => p.RoleState.uid == uid);
+            if (player == null) return;
+
+            WeaponActor weapon;
+            if (!weaponDic.TryGetValue(weaponId, out weapon)) return;
+
+            // 角色拾取武器
+            player.EquipWeapon(weapon.WeaponObject);
+
+            // 移除武器
+            weaponDic.Remove(weaponId);
+            gameWorld.Destroy(weapon);
+
+            // 广播武器拾取消息
+            Broadcast(new Protocol.Msg
+            {
+                cmd = Protocol.CMD.RspPickupWeapon,
+                rspPickupWeapon = new Protocol.Body.RspPickupWeapon
+                {
+                    uid = player.RoleState.uid,
+                    weaponId = weapon.WeaponObject.assetId
+                }
+            });
+        }
+
+
 
         public override void Exit()
         {
