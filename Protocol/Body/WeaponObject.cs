@@ -57,6 +57,6 @@ namespace Protocol.Body
     {
         public bool isPickUpSuccess;
         public long uid; // 拾取武器的角色UID
-        public int weaponId; // 被拾取的武器ID
+        public long weaponId; // 被拾取的武器ID
     }
 }

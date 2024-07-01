@@ -115,7 +115,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         }
         void FightTask()
         {
-            int delta = 50;
+            int delta = 33;
             
             while (!cancellationTokenSource.IsCancellationRequested)
             {
@@ -221,9 +221,9 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 rspPickupWeapon = new Protocol.Body.RspPickupWeapon
                 {
                     uid = player.RoleState.uid,
-                    weaponId = weapon.WeaponObject.assetId
+                    weaponId = weaponId,
                 }
-            });
+            }) ;
         }
 
 
