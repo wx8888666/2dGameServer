@@ -33,6 +33,7 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
             RoleState.pos = roleState.pos;
             RoleState.dir = roleState.dir;
             Body.Position = roleState.pos.ToVector2();
+            RoleState.mousePos=roleState.mousePos;
             isStateChanged = true;
         }
     }

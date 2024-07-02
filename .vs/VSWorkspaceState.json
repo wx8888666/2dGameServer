@@ -4,7 +4,7 @@
     "\\2DSurviveGameServer",
     "\\2DSurviveGameServer\\02Sys",
     "\\2DSurviveGameServer\\02Sys\\Room",
-    "\\2DSurviveGameServer\\02Sys\\Room\\FSM",
+    "\\2DSurviveGameServer\\02Sys\\Room\\Actors",
     "\\2DSurviveGameServer\\03Svc",
     "\\2DSurviveGameServer\\Controllers",
     "\\2DSurviveGameServer\\Helpers",
