@@ -60,5 +60,7 @@ namespace Protocol
         ReqChangeTaskDatas,
         ReqPickupWeapon,
         RspPickupWeapon,
+        ReqWeaponFire,
+        RspWeaponFire,
     }
 }

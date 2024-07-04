@@ -1,8 +1,10 @@
 ﻿using _2DSurviveGameServer._02Sys.Room.Actors;
 using _2DSurviveGameServer._03Svc;
 using _2DSurviveGameServer.Helpers;
+using FarseerPhysics.Dynamics;
 using GameEngine;
 using Microsoft.Xna.Framework;
+using Protocol;
 using Protocol.Body;
 using Yitter.IdGenerator;
 
@@ -12,6 +14,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
     {
         GameWorld gameWorld;
         List<RoleActor> roleActorList;
+        List<BulletActor>bulletActorsList;
         CancellationTokenSource cancellationTokenSource;
         Dictionary<long, WeaponActor> weaponDic;
         List<MonsterActor> monsterActorList;
@@ -32,6 +35,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
             cancellationTokenSource = new CancellationTokenSource();
             weaponDic = new Dictionary<long, WeaponActor>();
             monsterActorList = new List<MonsterActor>();
+            bulletActorsList = new List<BulletActor>();
             SpawnMonsters(5);
 
             for (int i = 0;i<Room.UIdArr.Length;i++)
@@ -226,7 +230,53 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
             }) ;
         }
 
+        public void ReqWeaponFire(ReqWeaponFire reqWeaponFire)
+        {
+            var role = roleActorList.FirstOrDefault(p => p.RoleState.uid == reqWeaponFire.uid);
+            if (role != null)
+            {
+                bool isFireSuccess = false;
+                //如果没子弹不允许射击
+                if (role.RoleState.weaponObject.magazinesCount > 0)
+                {
+                    isFireSuccess = true;
+                    
+                    role.RoleState.weaponObject.magazinesCount--;
 
+                    BulletState bulletState = new BulletState()
+                    {
+                        Id= YitIdHelper.NextId(),
+                        Speed = 5,
+                        StartPos = reqWeaponFire.startPos,
+                        EndPos = reqWeaponFire.endPos,
+                        BulletName = "bullet1",
+                        Pos = reqWeaponFire.startPos
+                    };
+                    Vector2 direction = (reqWeaponFire.endPos.ToVector2() - reqWeaponFire.startPos.ToVector2());
+                    BulletActor bulletActor = gameWorld.Create<BulletActor>(bulletState.Pos.ToVector2());
+                    bulletActor.Init(bulletState, direction, 5);
+                    bulletActorsList.Add(bulletActor);
+
+                }
+                SendTo(new Protocol.Msg
+                {
+                    cmd = Protocol.CMD.RspWeaponFire,
+                    rspWeaponFire = new Protocol.Body.RspWeaponFire
+                    {
+                        isFireSuccess = isFireSuccess,
+                        magCount = role.RoleState.weaponObject.magazinesCount,
+                        spareMagCount = role.RoleState.weaponObject.reserveMagazineCount,
+                        startPos = reqWeaponFire.startPos,
+                        endPos = reqWeaponFire.endPos,
+                    }
+                }, Room.GetPosIndex(reqWeaponFire.uid));
+                this.ColorLog(PEUtils.LogColor.Green, "成功发射");
+            }
+            else
+            {
+                this.Warn($"异常id:{reqWeaponFire.uid} 发射子弹！");
+            }
+        }
 
         public override void Exit()
         {

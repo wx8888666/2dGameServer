@@ -211,5 +211,15 @@ namespace _2DSurviveGameServer._02Sys.Room
                 }
             }
         }
+        public void ReqWeaponFire(ReqWeaponFire reqWeaponFire)
+        {
+            if (currentRoomState == RoomStateEnum.Fight)
+            {
+                if (fsm[currentRoomState] is RoomStateFight state)
+                {
+                    state.ReqWeaponFire(reqWeaponFire);
+                }
+            }
+        }
     }
 }

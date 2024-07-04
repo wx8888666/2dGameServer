@@ -36,7 +36,10 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         {
             Room.SendExcept(msg, posIndex);
         }
-
+        protected void SendTo(Msg msg, int posIndex)
+        {
+            Room.SendTo(msg, posIndex);
+        }
         protected void ChangeRoomState(RoomStateEnum roomStateEnum)
         {
             Room.ChangeRoomState(roomStateEnum);

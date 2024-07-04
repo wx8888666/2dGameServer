@@ -31,7 +31,7 @@ namespace Protocol.Body
     public class ReqWeaponFire
     {
         public long uid;
-        public int roomId;
+        public long roomId;
         public int weaponId;
         public NetVector2 startPos;
         public NetVector2 endPos;
@@ -59,4 +59,15 @@ namespace Protocol.Body
         public long uid; // 拾取武器的角色UID
         public long weaponId; // 被拾取的武器ID
     }
+    [Serializable]
+    public class BulletState
+    {
+        public long Id { get; set; }
+        public NetVector2 StartPos { get; set; }
+        public NetVector2 EndPos { get; set; }
+        public NetVector2 Pos { get; set; }
+        public float Speed { get; set; }
+        public string BulletName { get; set; }
+    }
+    
 }

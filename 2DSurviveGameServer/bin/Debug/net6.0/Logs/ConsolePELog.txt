@@ -1,18 +1,30 @@
-[L]# 05:01:51--032  ThreadID:1 >> Server Start...
-[L]# 05:01:55--272  ThreadID:8 >> Client Connected sid:1
-[L]# 05:01:57--420  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：1
-[L]# 05:01:58--887  ThreadID:25 >> Client Connected sid:2
-[L]# 05:02:00--244  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：2
-[L]# 05:02:00--252  ThreadID:1 >> id为564206461853701的房间现在进入Confirm状态
-[L]# 05:02:00--254  ThreadID:1 >> 创建了一个房间，当前房间数量：1
-[L]# 05:02:00--255  ThreadID:1 >> 匹配成功，当前匹配队列人数：0
-[L]# 05:02:01--380  ThreadID:1 >> id为564206461853701的房间现在进入Load状态
-[L]# 05:02:02--488  ThreadID:1 >> id为564206461853701的房间现在进入Fight状态
-[L]# 05:05:21--871  ThreadID:26 >> Client Connected sid:3
-[L]# 05:05:23--013  ThreadID:1 >> uid:8 变更连接 sid:3
-[L]# 05:05:31--871  ThreadID:42 >> Client Connected sid:4
-[L]# 05:05:32--908  ThreadID:1 >> uid:9 变更连接 sid:4
-[L]# 05:08:56--477  ThreadID:46 >> Client Connected sid:5
-[L]# 05:09:00--872  ThreadID:1 >> uid:9 变更连接 sid:5
-[L]# 05:09:00--876  ThreadID:43 >> Client Connected sid:6
-[L]# 05:09:04--667  ThreadID:1 >> uid:8 变更连接 sid:6
+[L]# 05:15:50--661  ThreadID:1 >> Server Start...
+[L]# 05:15:54--291  ThreadID:7 >> Client Connected sid:1
+[L]# 05:15:55--760  ThreadID:24 >> Client Connected sid:2
+[L]# 05:15:58--442  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：1
+[L]# 05:16:00--964  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：2
+[L]# 05:16:00--971  ThreadID:1 >> id为564917694242821的房间现在进入Confirm状态
+[L]# 05:16:00--973  ThreadID:1 >> 创建了一个房间，当前房间数量：1
+[L]# 05:16:00--973  ThreadID:1 >> 匹配成功，当前匹配队列人数：0
+[L]# 05:16:02--190  ThreadID:1 >> id为564917694242821的房间现在进入Load状态
+[L]# 05:16:03--291  ThreadID:1 >> id为564917694242821的房间现在进入Fight状态
+[L]# 05:16:11--875  ThreadID:1 >> 成功发射
+[L]# 05:16:13--011  ThreadID:1 >> 成功发射
+[L]# 05:16:13--968  ThreadID:1 >> 成功发射
+[L]# 05:16:14--800  ThreadID:1 >> 成功发射
+[L]# 05:16:15--672  ThreadID:1 >> 成功发射
+[L]# 05:16:16--246  ThreadID:1 >> 成功发射
+[L]# 05:16:16--533  ThreadID:1 >> 成功发射
+[L]# 05:16:16--758  ThreadID:1 >> 成功发射
+[L]# 05:16:16--922  ThreadID:1 >> 成功发射
+[L]# 05:16:17--089  ThreadID:1 >> 成功发射
+[L]# 05:16:17--271  ThreadID:1 >> 成功发射
+[L]# 05:16:17--459  ThreadID:1 >> 成功发射
+[L]# 05:16:17--712  ThreadID:1 >> 成功发射
+[L]# 05:16:17--896  ThreadID:1 >> 成功发射
+[L]# 05:16:18--908  ThreadID:1 >> 成功发射
+[L]# 05:16:19--551  ThreadID:1 >> 成功发射
+[L]# 05:16:20--121  ThreadID:1 >> 成功发射
+[L]# 05:16:20--530  ThreadID:1 >> 成功发射
+[L]# 05:16:20--912  ThreadID:1 >> 成功发射
+[L]# 05:16:21--317  ThreadID:1 >> 成功发射

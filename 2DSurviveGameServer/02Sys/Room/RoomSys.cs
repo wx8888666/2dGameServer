@@ -20,7 +20,8 @@ namespace _2DSurviveGameServer._02Sys.Room
             netSvc.AddMsgHandle(CMD.SndLoadPrg, SndLoadPrg);
             netSvc.AddMsgHandle(CMD.SndRoleState, SndRoleState);
             netSvc.AddMsgHandle(CMD.SndEnterRoom, SndEnterRoom);
-            NetSvc.Instance.AddMsgHandle(Protocol.CMD.ReqPickupWeapon, ReqPickupWeapon);
+            netSvc.AddMsgHandle(CMD.ReqPickupWeapon, ReqPickupWeapon);
+            netSvc.AddMsgHandle(CMD.ReqWeaponFire, ReqWeaponFire);
         }
 
         public override void Update()
@@ -95,6 +96,14 @@ namespace _2DSurviveGameServer._02Sys.Room
             if (gameRoomDic.TryGetValue(req.roomId, out GameRoom room))
             {
                 room.ReqPickupWeapon(req);
+            }
+        }
+        public void ReqWeaponFire(MsgPack pack)
+        {
+            var req = pack.msg.reqWeaponFire;
+            if (gameRoomDic.TryGetValue(req.roomId, out GameRoom room))
+            {
+                room.ReqWeaponFire(req);
             }
         }
     }
