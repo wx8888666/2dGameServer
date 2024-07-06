@@ -18,7 +18,7 @@ namespace GameEngine
             world.Step(1f / delta);
         }
 
-        public T Create<T>(Vector2 pos) where T : Actor,new()
+        public T Create<T>(Vector2 pos) where T : Actor, new()
         {
             T actor = new T();
             actor.Body = BodyFactory.CreateRectangle(world, 1, 1, 1, actor);
@@ -33,11 +33,11 @@ namespace GameEngine
             actor = null;
         }
 
-        public void Raycast(Vector2 start,Vector2 dir,float distance,Action<Actor> callback)
+        public void Raycast(Vector2 start, Vector2 dir, float distance, Action<Actor> callback)
         {
             world.RayCast((f, p, n, fr) =>
             {
-                if(f.Body.UserData is Actor actor)
+                if (f.Body.UserData is Actor actor)
                 {
                     callback(actor);
                 }

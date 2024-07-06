@@ -62,5 +62,6 @@ namespace Protocol
         RspPickupWeapon,
         ReqWeaponFire,
         RspWeaponFire,
+        NtfMonsterHit,
     }
 }

@@ -12,15 +12,22 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
 {
     public class RoomStateFight : RoomStateBase
     {
+        // 静态实例
+        private static RoomStateFight _instance;
+        public static RoomStateFight Instance => _instance;
+
         GameWorld gameWorld;
         List<RoleActor> roleActorList;
-        List<BulletActor>bulletActorsList;
+        List<BulletActor> bulletActorsList;
         CancellationTokenSource cancellationTokenSource;
         Dictionary<long, WeaponActor> weaponDic;
         List<MonsterActor> monsterActorList;
         static int Monsterid = 1;
+
         public RoomStateFight(GameRoom room) : base(room)
         {
+            // 初始化静态实例
+            _instance = this;
         }
 
         public override void Enter()
@@ -38,52 +45,53 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
             bulletActorsList = new List<BulletActor>();
             SpawnMonsters(5);
 
-            for (int i = 0;i<Room.UIdArr.Length;i++)
+            for (int i = 0; i < Room.UIdArr.Length; i++)
             {
                 RoleActor roleActor = gameWorld.Create<RoleActor>(new Microsoft.Xna.Framework.Vector2(1 + i, 1 + i));
-                roleActorList.Add(roleActor); 
-                roleActor.Id=YitIdHelper.NextId();
+                roleActorList.Add(roleActor);
+                roleActor.Id = YitIdHelper.NextId();
                 roleActor.RoleState.uid = Room.UIdArr[i];
                 roleActor.RoleState.roleName = CacheSvc.Instance.GetUser(Room.UIdArr[i]).RoleName;
                 roleActor.RoleState.pos = roleActor.Body.Position.ToNetVector2();
                 roleActor.RoleState.dir = new Protocol.Body.NetVector2();
-                //通过这个方法来赋值roleActor.RoleState.id
                 roleActor.Start();
             }
-
 
             Broadcast(new Protocol.Msg
             {
                 cmd = Protocol.CMD.NtfSpawnRole,
                 ntfSpawnRole = new Protocol.Body.NtfSpawnRole
                 {
-                    roleStates = roleActorList.Select(p=>p.RoleState).ToArray()
-                }
-            });
-            //创建武器
-            SpawnWeapon(new WeaponObject[]{ 
-                new WeaponObject{ 
-                assetId=0,
-                pos= new Protocol.Body.NetVector2(0, 0),
-                },
-               new WeaponObject{
-                assetId=1,
-                pos= new Protocol.Body.NetVector2(1, 3),
+                    roleStates = roleActorList.Select(p => p.RoleState).ToArray()
                 }
             });
 
+            // 创建武器
+            SpawnWeapon(new WeaponObject[]{
+            new WeaponObject{
+                assetId = 0,
+                pos = new Protocol.Body.NetVector2(0, 0),
+            },
+            new WeaponObject{
+                assetId = 1,
+                pos = new Protocol.Body.NetVector2(1, 3),
+            }
+        });
+
             Task.Run(FightTask);
         }
+
         void SpawnMonsters(int count)
         {
             for (int i = 0; i < count; i++)
             {
                 MonsterActor monsterActor = gameWorld.Create<MonsterActor>(new Microsoft.Xna.Framework.Vector2(2 + i, 2 + i));
+                //monsterActor.Initialize(gameWorld);
                 monsterActor.Id = Monsterid + i;
-                Monsterid ++;
-                monsterActor.MonsterState.monsterName = "Monster_" + i;
-                monsterActor.MonsterState.pos = monsterActor.Body.Position.ToNetVector2();
-                monsterActor.MonsterState.dir = new Protocol.Body.NetVector2();
+                Monsterid++;
+                monsterActor.monsterState.monsterName = "Monster_" + i;
+                monsterActor.monsterState.pos = monsterActor.Body.Position.ToNetVector2();
+                monsterActor.monsterState.dir = new Protocol.Body.NetVector2();
                 monsterActor.Start();
                 monsterActorList.Add(monsterActor);
             }
@@ -93,23 +101,23 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 cmd = Protocol.CMD.NtfSpawnMonster,
                 ntfSpawnMonster = new Protocol.Body.NtfSpawnMonster
                 {
-                    monsterStates = monsterActorList.Select(p => p.MonsterState).ToArray()
+                    monsterStates = monsterActorList.Select(p => p.monsterState).ToArray()
                 }
             });
         }
+
         void SpawnWeapon(params WeaponObject[] weaponObject)
         {
             foreach (WeaponObject weapon in weaponObject)
             {
-                WeaponActor weaponActor = gameWorld.Create<WeaponActor>(new Microsoft.Xna.Framework.Vector2(3,3));
-                weaponActor.Id=YitIdHelper.NextId();
+                WeaponActor weaponActor = gameWorld.Create<WeaponActor>(new Microsoft.Xna.Framework.Vector2(3, 3));
+                weaponActor.Id = YitIdHelper.NextId();
                 weaponDic.Add(weaponActor.Id, weaponActor);
                 weaponActor.UpdateWeapon(weapon);
                 weaponActor.Start();
             }
             Broadcast(new Protocol.Msg
             {
-
                 cmd = Protocol.CMD.NtfSpawnWeapon,
                 ntfSpawnWeapon = new NtfSpawnWeapon
                 {
@@ -117,40 +125,70 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 }
             });
         }
+
         void FightTask()
         {
             int delta = 33;
-            
+
             while (!cancellationTokenSource.IsCancellationRequested)
             {
                 Room.CheckDisconnected();
 
                 gameWorld.Update(delta);
                 UpdateMonsters();
+                UpdateBullet();
                 BroadcastRole();
                 BroadcastMonsters();
 
                 Task.Delay(delta).Wait();
             }
+
             void UpdateMonsters()
             {
-                foreach (var monster in monsterActorList)
+                for (int i = monsterActorList.Count - 1; i >= 0; i--)
                 {
-                   
+                    var monster = monsterActorList[i];
                     foreach (var player in roleActorList)
                     {
                         if (Vector2.Distance(monster.Body.Position, player.Body.Position) < 5.0f) // Assuming 5.0 is the chase range
                         {
-                            //Vector2 pathToPlayer = monster.AStarPathfinding(monster.Body.Position, player.Body.Position);
-                            //monster.MoveToTargetPosition();
+                            //Vector2 targetPosition = monster.AStarPathfinding(monster.Body.Position, player.Body.Position);
+                            //monster.MoveToTargetPosition(targetPosition);
                             //monster.isStateChanged = true;
                             //这里通过A*算法来实现
-                            break;
+                            //break;
                         }
+                    }
+                    if (monster.hpChanged)
+                    {
+                        Broadcast(new Protocol.Msg
+                        {
+                            cmd = Protocol.CMD.NtfMonsterHit,
+                            ntfMonsterHit = new Protocol.Body.NtfMonsterHit
+                            {
+                               monsterState=monster.monsterState,
+                            }
+                        });
+                        monster.hpChanged = false;
+                    }
+                    if (monster.isDead())
+                    {
+                        monsterActorList.Remove(monster);
+                      
+                        continue;
                     }
                     monster.Update();
                 }
             }
+
+            void UpdateBullet()
+            {
+                foreach (var bullet in bulletActorsList.ToList()) // 避免在迭代时修改列表
+                {
+                    bullet.Update();
+                }
+            }
+
             void BroadcastMonsters()
             {
                 List<MonsterState> monsterStateList = new List<MonsterState>();
@@ -158,7 +196,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 {
                     if (v.isStateChanged)
                     {
-                        monsterStateList.Add(v.MonsterState);
+                        monsterStateList.Add(v.monsterState);
                         v.isStateChanged = false;
                     }
                 }
@@ -175,10 +213,11 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                     });
                 }
             }
+
             void BroadcastRole()
             {
                 List<RoleState> roleStateList = new List<RoleState>();
-                foreach(var v in roleActorList)
+                foreach (var v in roleActorList)
                 {
                     if (v.isStateChanged)
                     {
@@ -187,7 +226,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                     }
                 }
 
-                if(roleStateList.Count > 0)
+                if (roleStateList.Count > 0)
                 {
                     Broadcast(new Protocol.Msg
                     {
@@ -198,9 +237,9 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                         }
                     });
                 }
-
             }
         }
+
         // 处理拾取武器请求
         public void HandlePickupWeaponRequest(long uid, long weaponId)
         {
@@ -227,7 +266,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                     uid = player.RoleState.uid,
                     weaponId = weaponId,
                 }
-            }) ;
+            });
         }
 
         public void ReqWeaponFire(ReqWeaponFire reqWeaponFire)
@@ -237,27 +276,27 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
             {
                 bool isFireSuccess = false;
                 //如果没子弹不允许射击
-                if (role.RoleState.weaponObject.magazinesCount > 0)
+                //if (role.RoleState.weaponObject.magazinesCount > 0)
+                //{
+                isFireSuccess = true;
+
+                role.RoleState.weaponObject.magazinesCount--;
+
+                BulletState bulletState = new BulletState()
                 {
-                    isFireSuccess = true;
-                    
-                    role.RoleState.weaponObject.magazinesCount--;
+                    Id = YitIdHelper.NextId(),
+                    Speed = 5,
+                    StartPos = reqWeaponFire.startPos,
+                    EndPos = reqWeaponFire.endPos,
+                    BulletName = "bullet1",
+                    Pos = reqWeaponFire.startPos
+                };
+                Vector2 direction = (reqWeaponFire.endPos.ToVector2() - reqWeaponFire.startPos.ToVector2());
+                BulletActor bulletActor = gameWorld.Create<BulletActor>(bulletState.Pos.ToVector2());
+                bulletActor.Init(bulletState, direction, 5);
+                bulletActorsList.Add(bulletActor);
 
-                    BulletState bulletState = new BulletState()
-                    {
-                        Id= YitIdHelper.NextId(),
-                        Speed = 5,
-                        StartPos = reqWeaponFire.startPos,
-                        EndPos = reqWeaponFire.endPos,
-                        BulletName = "bullet1",
-                        Pos = reqWeaponFire.startPos
-                    };
-                    Vector2 direction = (reqWeaponFire.endPos.ToVector2() - reqWeaponFire.startPos.ToVector2());
-                    BulletActor bulletActor = gameWorld.Create<BulletActor>(bulletState.Pos.ToVector2());
-                    bulletActor.Init(bulletState, direction, 5);
-                    bulletActorsList.Add(bulletActor);
-
-                }
+                //}
                 SendTo(new Protocol.Msg
                 {
                     cmd = Protocol.CMD.RspWeaponFire,
@@ -270,7 +309,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                         endPos = reqWeaponFire.endPos,
                     }
                 }, Room.GetPosIndex(reqWeaponFire.uid));
-                this.ColorLog(PEUtils.LogColor.Green, "成功发射");
+                //this.ColorLog(PEUtils.LogColor.Green, "成功发射");
             }
             else
             {
@@ -287,8 +326,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         {
         }
 
-    
-        public void UpdateRole(int posIndex,RoleState roleState)
+        public void UpdateRole(int posIndex, RoleState roleState)
         {
             roleActorList[posIndex].UpdateState(roleState);
         }
@@ -296,17 +334,28 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         {
             monsterActorList[monsterIndex].UpdateState(monsterState);
         }
-        public  RoleState[] GetRoleState()
+        public RoleState[] GetRoleState()
         {
             return roleActorList.Select(v => v.RoleState).ToArray();
         }
         public WeaponObject[] GetWeaponObjectArr()
         {
-            return weaponDic.Values.Select( p =>p.WeaponObject ).ToArray();
+            return weaponDic.Values.Select(p => p.WeaponObject).ToArray();
         }
         public MonsterState[] GetMonsterObjectArr()
         {
-            return monsterActorList.Select(v=>v.MonsterState).ToArray();
+            return monsterActorList.Select(v => v.monsterState).ToArray();
+        }
+        public void RemoveBullet(BulletActor bullet)
+        {
+            gameWorld.Destroy(bullet);
+            bulletActorsList.Remove(bullet);
+        }
+
+        public List<MonsterActor> GetMonsters()
+        {
+            return monsterActorList;
         }
     }
+
 }

@@ -5,6 +5,13 @@ using System.Text;
 
 namespace Protocol.Body
 {
+
+    public enum StateEnum
+    {
+        Alive,
+        Dying,
+        Dead,
+    }
     [Serializable]
     public class ReqCreateRole
     {
@@ -162,10 +169,14 @@ namespace Protocol.Body
     [Serializable]
     public class MonsterState
     {
+        public int hp;
+        public int Maxhp;
+        public int MonsterType;
         public long id { get; set; }
         public NetVector2 pos { get; set; }
         public NetVector2 dir { get; set; }
         public string monsterName { get; set; }
+        public StateEnum state { get; set; }
     }
     [Serializable]
     public class NtfSpawnMonster
@@ -178,5 +189,9 @@ namespace Protocol.Body
     {
         public MonsterState[] monsterStates;
     }
-
+    [Serializable]
+    public class NtfMonsterHit
+    {
+        public MonsterState monsterState;
+    }
 }

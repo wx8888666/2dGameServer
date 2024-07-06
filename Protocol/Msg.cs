@@ -58,6 +58,7 @@ namespace Protocol
         public RspPickupWeapon rspPickupWeapon;
         public ReqWeaponFire reqWeaponFire;
         public RspWeaponFire rspWeaponFire;
+        public NtfMonsterHit ntfMonsterHit;
     }
 
 }
