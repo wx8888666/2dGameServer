@@ -186,6 +186,18 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 foreach (var bullet in bulletActorsList.ToList()) // 避免在迭代时修改列表
                 {
                     bullet.Update();
+                 
+                }
+                if (bulletActorsList.Count > 0)
+                {
+                    Broadcast(new Protocol.Msg
+                    {
+                        cmd = Protocol.CMD.NtfBulletState,
+                        ntfBulletState = new Protocol.Body.NtfBulletState
+                        {
+                            BulletStates = bulletActorsList.Select(p => p.BulletState).ToArray()
+                        }
+                    });
                 }
             }
 
@@ -285,7 +297,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 BulletState bulletState = new BulletState()
                 {
                     Id = YitIdHelper.NextId(),
-                    Speed = 5,
+                    Speed = 25,
                     StartPos = reqWeaponFire.startPos,
                     EndPos = reqWeaponFire.endPos,
                     BulletName = "bullet1",
@@ -297,7 +309,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 bulletActorsList.Add(bulletActor);
 
                 //}
-                SendTo(new Protocol.Msg
+                Broadcast(new Protocol.Msg
                 {
                     cmd = Protocol.CMD.RspWeaponFire,
                     rspWeaponFire = new Protocol.Body.RspWeaponFire
@@ -307,8 +319,9 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                         spareMagCount = role.RoleState.weaponObject.reserveMagazineCount,
                         startPos = reqWeaponFire.startPos,
                         endPos = reqWeaponFire.endPos,
+                        bulletState = bulletState,
                     }
-                }, Room.GetPosIndex(reqWeaponFire.uid));
+                });
                 //this.ColorLog(PEUtils.LogColor.Green, "成功发射");
             }
             else

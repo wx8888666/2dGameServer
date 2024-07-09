@@ -63,5 +63,6 @@ namespace Protocol
         ReqWeaponFire,
         RspWeaponFire,
         NtfMonsterHit,
+        NtfBulletState,
     }
 }

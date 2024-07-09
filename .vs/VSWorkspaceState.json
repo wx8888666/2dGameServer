@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\2DSurviveGameServer",
+    "\\2DSurviveGameServer\\01Common",
     "\\2DSurviveGameServer\\02Sys",
     "\\2DSurviveGameServer\\02Sys\\Room",
     "\\2DSurviveGameServer\\02Sys\\Room\\Actors",
-    "\\2DSurviveGameServer\\Helpers",
     "\\GameEngine",
     "\\Protocol",
     "\\Protocol\\Body",

@@ -12,8 +12,8 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
         public BulletState BulletState { get; private set; }
         private Vector2 direction;
         private int damage;
-        private int destroyTimeCounter = 0;
-        private int destroyTime = 5000;
+        private float destroyTimeCounter = 0f;
+        private float destroyTime = 2f; 
 
         public void Init(BulletState bulletState, Vector2 direction, int damage)
         {

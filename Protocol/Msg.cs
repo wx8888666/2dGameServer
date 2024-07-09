@@ -59,6 +59,7 @@ namespace Protocol
         public ReqWeaponFire reqWeaponFire;
         public RspWeaponFire rspWeaponFire;
         public NtfMonsterHit ntfMonsterHit;
+        public NtfBulletState ntfBulletState;
     }
 
 }

@@ -44,6 +44,7 @@ namespace Protocol.Body
         public int spareMagCount;//当前后备弹夹子弹数量
         public NetVector2 startPos;
         public NetVector2 endPos;
+        public BulletState bulletState;
     }
     [Serializable]
     public class ReqPickupWeapon
@@ -68,6 +69,11 @@ namespace Protocol.Body
         public NetVector2 Pos { get; set; }
         public float Speed { get; set; }
         public string BulletName { get; set; }
+    }
+    [Serializable]
+    public class NtfBulletState
+    {
+        public BulletState[] BulletStates { get; set; }
     }
     
 }
