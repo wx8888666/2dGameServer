@@ -73,7 +73,8 @@ namespace Protocol.Body
     [Serializable]
     public class NtfBulletState
     {
-        public BulletState[] BulletStates { get; set; }
+        public long uid;
+        public BulletState BulletState { get; set; }
     }
     
 }
