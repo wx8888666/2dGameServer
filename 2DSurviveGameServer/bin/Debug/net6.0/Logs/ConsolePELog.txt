@@ -1,20 +1,20 @@
-[L]# 04:10:25--830  ThreadID:1 >> Server Start...
-[L]# 04:11:03--661  ThreadID:27 >> Client Connected sid:1
-[L]# 04:11:08--184  ThreadID:29 >> Client Connected sid:2
-[L]# 04:11:14--010  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：1
-[L]# 04:11:15--123  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：2
-[L]# 04:11:15--133  ThreadID:1 >> id为567025144238085的房间现在进入Confirm状态
-[L]# 04:11:15--135  ThreadID:1 >> 创建了一个房间，当前房间数量：1
-[L]# 04:11:15--135  ThreadID:1 >> 匹配成功，当前匹配队列人数：0
-[L]# 04:11:16--282  ThreadID:1 >> id为567025144238085的房间现在进入Load状态
-[L]# 04:11:17--407  ThreadID:1 >> id为567025144238085的房间现在进入Fight状态
-[L]# 04:12:18--038  ThreadID:29 >> Client Connected sid:3
-[L]# 04:12:19--713  ThreadID:1 >> uid:8 变更连接 sid:3
-[L]# 04:13:18--028  ThreadID:27 >> Client Connected sid:4
-[L]# 04:13:19--082  ThreadID:1 >> uid:8 变更连接 sid:4
-[L]# 04:20:39--369  ThreadID:44 >> Client Connected sid:5
-[L]# 04:20:40--930  ThreadID:1 >> uid:8 变更连接 sid:5
-[L]# 04:20:59--876  ThreadID:47 >> Client Connected sid:6
-[L]# 04:21:02--615  ThreadID:1 >> uid:9 变更连接 sid:6
-[L]# 04:21:32--883  ThreadID:47 >> Client Connected sid:7
-[L]# 04:21:37--327  ThreadID:1 >> uid:8 变更连接 sid:7
+[L]# 06:44:45--100  ThreadID:1 >> Server Start...
+[L]# 06:44:50--013  ThreadID:25 >> Client Connected sid:1
+[L]# 06:44:53--210  ThreadID:7 >> Client Connected sid:2
+[L]# 06:44:55--029  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：1
+[L]# 06:44:55--610  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：2
+[L]# 06:44:55--618  ThreadID:1 >> id为567416805748741的房间现在进入Confirm状态
+[L]# 06:44:55--619  ThreadID:1 >> 创建了一个房间，当前房间数量：1
+[L]# 06:44:55--619  ThreadID:1 >> 匹配成功，当前匹配队列人数：0
+[L]# 06:44:57--830  ThreadID:1 >> id为567416805748741的房间现在进入Load状态
+[L]# 06:44:58--926  ThreadID:1 >> id为567416805748741的房间现在进入Fight状态
+[L]# 06:48:33--551  ThreadID:42 >> Client Connected sid:3
+[L]# 06:48:34--732  ThreadID:1 >> uid:8 变更连接 sid:3
+[L]# 06:51:44--661  ThreadID:42 >> Client Connected sid:4
+[L]# 06:51:46--681  ThreadID:1 >> uid:8 变更连接 sid:4
+[L]# 06:55:18--411  ThreadID:36 >> Client Connected sid:5
+[L]# 06:55:19--395  ThreadID:1 >> uid:8 变更连接 sid:5
+[L]# 06:56:52--263  ThreadID:36 >> Client Connected sid:6
+[L]# 06:57:00--336  ThreadID:1 >> uid:8 变更连接 sid:6
+[L]# 07:01:06--434  ThreadID:40 >> Client Connected sid:7
+[L]# 07:01:07--807  ThreadID:1 >> uid:8 变更连接 sid:7
