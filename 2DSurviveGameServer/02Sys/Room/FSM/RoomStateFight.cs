@@ -25,7 +25,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         Dictionary<long, WeaponActor> weaponDic;
         List<MonsterActor> monsterActorList;
         static int Monsterid = 1;
-        //private JObject mapJo;
+        private JObject mapJo;
 
         public RoomStateFight(GameRoom room) : base(room)
         {
@@ -46,7 +46,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
             weaponDic = new Dictionary<long, WeaponActor>();
             monsterActorList = new List<MonsterActor>();
             bulletActorsList = new List<BulletActor>();
-           // mapJo = JObject.Parse(File.ReadAllText("01Common/Config/AStar.json"));
+           mapJo = JObject.Parse(File.ReadAllText("01Common/Config/AStar.json"));
             SpawnMonsters(5);
 
             for (int i = 0; i < Room.UIdArr.Length; i++)
@@ -87,7 +87,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
 
         void SpawnMonsters(int count)
         {
-            //var map = new AStarMap(mapJo);
+            var map = new AStarMap(mapJo);
             for (int i = 0; i < count; i++)
             {
                 MonsterActor monsterActor = gameWorld.Create<MonsterActor>(new Microsoft.Xna.Framework.Vector2(2 + i, 2 + i));
@@ -98,7 +98,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 monsterActor.monsterState.pos = monsterActor.Body.Position.ToNetVector2();
                 monsterActor.monsterState.dir = new Protocol.Body.NetVector2();
                 monsterActor.Start();
-               // monsterActor.Init(roleActorList,map);
+               //monsterActor.Init(map);
                 
                 monsterActorList.Add(monsterActor);
             }
@@ -384,6 +384,10 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         public List<MonsterActor> GetMonsters()
         {
             return monsterActorList;
+        }
+        public List<RoleActor> GetRoleActors()
+        {
+            return roleActorList;
         }
     }
 
