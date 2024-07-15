@@ -1,22 +1,17 @@
-[L]# 04:31:59--280  ThreadID:1 >> Server Start...
-[L]# 04:31:59--371  ThreadID:7 >> Client Connected sid:1
-[L]# 04:32:03--526  ThreadID:8 >> Client Connected sid:2
-[L]# 04:32:07--738  ThreadID:7 >> Client Connected sid:3
-[L]# 04:32:10--831  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：1
-[L]# 04:32:11--427  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：2
-[L]# 04:32:11--437  ThreadID:1 >> id为568091973259269的房间现在进入Confirm状态
-[L]# 04:32:11--440  ThreadID:1 >> 创建了一个房间，当前房间数量：1
-[L]# 04:32:11--440  ThreadID:1 >> 匹配成功，当前匹配队列人数：0
-[L]# 04:32:12--840  ThreadID:1 >> id为568091973259269的房间现在进入Load状态
-[L]# 04:32:13--977  ThreadID:1 >> id为568091973259269的房间现在进入Fight状态
-[L]# 04:33:19--457  ThreadID:7 >> Client Connected sid:4
-[L]# 04:34:13--496  ThreadID:7 >> Client Connected sid:5
-[L]# 04:34:15--243  ThreadID:1 >> uid:8 变更连接 sid:5
-[L]# 04:34:43--510  ThreadID:8 >> Client Connected sid:6
-[L]# 04:34:44--307  ThreadID:1 >> uid:8 变更连接 sid:6
-[L]# 04:50:11--092  ThreadID:43 >> Client Connected sid:7
-[L]# 04:50:12--223  ThreadID:1 >> uid:8 变更连接 sid:7
-[L]# 04:50:57--675  ThreadID:41 >> Client Connected sid:8
-[L]# 04:50:58--363  ThreadID:1 >> uid:8 变更连接 sid:8
-[L]# 04:51:27--806  ThreadID:41 >> Client Connected sid:10
-[L]# 04:51:29--183  ThreadID:1 >> uid:8 变更连接 sid:10
+[L]# 05:26:53--208  ThreadID:1 >> Server Start...
+[L]# 05:26:58--636  ThreadID:7 >> Client Connected sid:1
+[L]# 05:27:02--021  ThreadID:26 >> Client Connected sid:2
+[L]# 05:27:03--543  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：1
+[L]# 05:27:03--950  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：2
+[L]# 05:27:03--960  ThreadID:1 >> id为568813248233477的房间现在进入Confirm状态
+[L]# 05:27:03--962  ThreadID:1 >> 创建了一个房间，当前房间数量：1
+[L]# 05:27:03--962  ThreadID:1 >> 匹配成功，当前匹配队列人数：0
+[L]# 05:27:05--041  ThreadID:1 >> id为568813248233477的房间现在进入Load状态
+[L]# 05:27:06--201  ThreadID:1 >> id为568813248233477的房间现在进入Fight状态
+[L]# 05:27:15--227  ThreadID:25 >> 5
+[L]# 05:27:20--565  ThreadID:25 >> 10
+[L]# 05:27:24--454  ThreadID:25 >> 15
+[L]# 05:27:35--485  ThreadID:25 >> 20
+[L]# 05:27:37--752  ThreadID:25 >> 25
+[L]# 05:28:00--166  ThreadID:7 >> Client Connected sid:3
+[L]# 05:28:01--671  ThreadID:7 >> Client Connected sid:4

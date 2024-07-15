@@ -36,4 +36,9 @@ namespace Protocol.Body
         public long roomId;
         public long uid;
     }
+    [Serializable]
+    public class NtfRoleInfor
+    {
+        public RoleState roleState;
+    }
 }

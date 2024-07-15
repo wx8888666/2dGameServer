@@ -22,12 +22,20 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
         {
             
             RoleState.id=this.Id;
+            RoleState.hp = 20;
+            RoleState.maxHp=20;
         }
 
         public override void Update()
         {
-        }
 
+        }
+        public void getIntegral()
+        {
+            RoleState.integral += 5;
+            this.Log(RoleState.integral);
+            isStateChanged = true;
+        }
         public void UpdateState(RoleState roleState)
         {
             RoleState.pos = roleState.pos;

@@ -20,6 +20,7 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
             this.BulletState = bulletState;
             this.direction = direction;
             this.damage = damage;
+       
             Body.Position = BulletState.Pos.ToVector2();
         }
 
@@ -69,7 +70,7 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
                 if (Vector2.Distance(Body.Position, enemy.Body.Position) < 1.0f) // 假设碰撞距离为1.0f
                 {
                     // 对敌人造成伤害
-                    enemy.TakeDamage(damage);
+                    enemy.TakeDamage(damage,BulletState.UId);
                     //this.Log(enemy.Id);
                     return true;
                 }

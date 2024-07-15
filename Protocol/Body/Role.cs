@@ -69,6 +69,8 @@ namespace Protocol.Body
         public bool isKing = false;
 
         public WeaponObject weaponObject;
+
+        public int integral;
     }
     
 

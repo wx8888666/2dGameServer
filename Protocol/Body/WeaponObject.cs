@@ -63,6 +63,7 @@ namespace Protocol.Body
     [Serializable]
     public class BulletState
     {
+        public long UId { get; set; }
         public long Id { get; set; }
         public NetVector2 StartPos { get; set; }
         public NetVector2 EndPos { get; set; }
