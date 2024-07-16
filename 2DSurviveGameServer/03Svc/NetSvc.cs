@@ -88,9 +88,11 @@ namespace _2DSurviveGameServer._03Svc
         /// <param name="msg"></param>
         public void AddMsgQueue(ServerSession session,Msg msg)
         {
-           
+            lock (pkgque_lock)
+            {
                 msgPackQueue.Enqueue(new MsgPack(session, msg));
-            
+            }
+
         }
 
         /// <summary>

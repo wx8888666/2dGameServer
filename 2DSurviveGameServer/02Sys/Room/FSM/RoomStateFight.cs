@@ -160,17 +160,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                     for (int i = monsterActorList.Count - 1; i >= 0; i--)
                     {
                         var monster = monsterActorList[i];
-                        foreach (var player in roleActorList)
-                        {
-                            if (Vector2.Distance(monster.Body.Position, player.Body.Position) < 5.0f) // Assuming 5.0 is the chase range
-                            {
-                                //Vector2 targetPosition = monster.AStarPathfinding(monster.Body.Position, player.Body.Position);
-                                //monster.MoveToTargetPosition(targetPosition);
-                                //monster.isStateChanged = true;
-                                //这里通过A*算法来实现
-                                //break;
-                            }
-                        }
+                       
                         if (monster.hpChanged)
                         {
                             Broadcast(new Protocol.Msg

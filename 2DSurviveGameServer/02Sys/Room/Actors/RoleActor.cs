@@ -38,6 +38,7 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
         }
         public void UpdateState(RoleState roleState)
         {
+      
             RoleState.pos = roleState.pos;
             RoleState.dir = roleState.dir;
             Body.Position = roleState.pos.ToVector2();

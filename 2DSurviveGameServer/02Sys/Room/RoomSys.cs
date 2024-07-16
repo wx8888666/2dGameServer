@@ -76,10 +76,13 @@ namespace _2DSurviveGameServer._02Sys.Room
 
         void SndRoleState(MsgPack pack)
         {
-            if (gameRoomDic.TryGetValue(pack.msg.sndRoleState.roomId, out GameRoom room))
+            Task.Run(() =>
             {
-                room.SndRoleState(pack.msg.sndRoleState.uid, pack.msg.sndRoleState.roleState);
-            }
+                if (gameRoomDic.TryGetValue(pack.msg.sndRoleState.roomId, out GameRoom room))
+                {
+                    room.SndRoleState(pack.msg.sndRoleState.uid, pack.msg.sndRoleState.roleState);
+                }
+            });
         }
         void SndEnterRoom(MsgPack pack)
         {
@@ -92,19 +95,25 @@ namespace _2DSurviveGameServer._02Sys.Room
         }
         public void ReqPickupWeapon(MsgPack pack)
         {
-           var req = pack.msg.reqPickupWeapon;
-            if (gameRoomDic.TryGetValue(req.roomId, out GameRoom room))
+            Task.Run(() =>
             {
-                room.ReqPickupWeapon(req);
-            }
+                var req = pack.msg.reqPickupWeapon;
+                if (gameRoomDic.TryGetValue(req.roomId, out GameRoom room))
+                {
+                    room.ReqPickupWeapon(req);
+                }
+            });
         }
         public void ReqWeaponFire(MsgPack pack)
         {
-            var req = pack.msg.reqWeaponFire;
-            if (gameRoomDic.TryGetValue(req.roomId, out GameRoom room))
+            Task.Run(() =>
             {
-                room.ReqWeaponFire(req);
-            }
+                var req = pack.msg.reqWeaponFire;
+                if (gameRoomDic.TryGetValue(req.roomId, out GameRoom room))
+                {
+                    room.ReqWeaponFire(req);
+                }
+            });
         }
     }
 }
