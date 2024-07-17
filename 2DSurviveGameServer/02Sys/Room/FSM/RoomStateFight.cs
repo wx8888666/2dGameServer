@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Newtonsoft.Json.Linq;
 using Protocol;
 using Protocol.Body;
+using System.Diagnostics;
 using Yitter.IdGenerator;
 
 namespace _2DSurviveGameServer._02Sys.Room.FSM
@@ -17,13 +18,13 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         // 静态实例
         private static RoomStateFight _instance;
         public static RoomStateFight Instance => _instance;
-
         GameWorld gameWorld;
         List<RoleActor> roleActorList;
         List<BulletActor> bulletActorsList;
         CancellationTokenSource cancellationTokenSource;
         Dictionary<long, WeaponActor> weaponDic;
         List<MonsterActor> monsterActorList;
+        private bool isEnd;
         static int Monsterid = 1;
         private JObject mapJo;
         private int monsterSpawnCount = 5; // 初始生成的怪物数量
@@ -57,6 +58,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 RoleActor roleActor = gameWorld.Create<RoleActor>(new Microsoft.Xna.Framework.Vector2(1 + i, 1 + i));
                 roleActorList.Add(roleActor);
                 roleActor.Id = YitIdHelper.NextId();
+                roleActor.RoleState.roleId= CacheSvc.Instance.GetUser(Room.UIdArr[i]).RoleId;
                 roleActor.RoleState.uid = Room.UIdArr[i];
                 roleActor.RoleState.roleName = CacheSvc.Instance.GetUser(Room.UIdArr[i]).RoleName;
                 roleActor.RoleState.pos = roleActor.Body.Position.ToNetVector2();
@@ -138,6 +140,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
 
         void FightTask()
         {
+          
             int delta = 33;
 
             while (!cancellationTokenSource.IsCancellationRequested)
@@ -355,6 +358,16 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         public override void Exit()
         {
             cancellationTokenSource.Cancel();
+
+            // 清理资源
+            roleActorList.Clear();
+            monsterActorList.Clear();
+            bulletActorsList.Clear();
+            weaponDic.Clear();
+
+            // 清理其他可能的资源
+            gameWorld = null;
+            mapJo = null;
         }
 
         public override void Update()

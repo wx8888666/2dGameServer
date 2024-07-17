@@ -60,6 +60,8 @@ namespace Protocol
         public RspWeaponFire rspWeaponFire;
         public NtfMonsterHit ntfMonsterHit;
         public NtfBulletState ntfBulletState;
+        public ReqExitBattle reqExitBattle; 
+        public RspExitBattle rspExitBattle;
     }
 
 }

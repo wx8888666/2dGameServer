@@ -109,6 +109,33 @@ namespace _2DSurviveGameServer._02Sys.Room
                 }
             }
         }
+        /// <summary>
+        /// 设置指定uid为永久退出
+        /// </summary>
+        /// <param name="uid"></param>
+        public void SetExit(long uid)
+        {
+            for (int i = 0; i < UIdArr.Length; i++)
+            {
+                if (UIdArr[i] == uid)
+                {
+                    ExitArr[i] = true;
+                    CacheSvc.Instance.UpdateClientState(uid, ClientStateEnum.None);
+                }
+            }
+
+            //判定是不是所有人都永久退出了，如果是则直接销毁房间
+            for (int i = 0; i < ExitArr.Length; i++)
+            {
+                if (ExitArr[i] == false)
+                {
+                    return;
+                }
+            }
+
+            //结束房间
+            ChangeRoomState(RoomStateEnum.End);
+        }
 
         public void Broadcast(Msg msg)
         {

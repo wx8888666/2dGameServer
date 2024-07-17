@@ -48,6 +48,8 @@ namespace Protocol.Body
     {
         public long uid;
 
+        public int roleId; 
+
         public string roleName;
 
         public int speed;

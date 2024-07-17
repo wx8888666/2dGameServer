@@ -22,6 +22,7 @@ namespace _2DSurviveGameServer._02Sys.Room
             netSvc.AddMsgHandle(CMD.SndEnterRoom, SndEnterRoom);
             netSvc.AddMsgHandle(CMD.ReqPickupWeapon, ReqPickupWeapon);
             netSvc.AddMsgHandle(CMD.ReqWeaponFire, ReqWeaponFire);
+            netSvc.AddMsgHandle(CMD.ReqExitBattle, ReqExitBattle);
         }
 
         public override void Update()
@@ -115,5 +116,24 @@ namespace _2DSurviveGameServer._02Sys.Room
                 }
             });
         }
+        public void ReqExitBattle(MsgPack pack)
+        {
+            ReqExitBattle req = pack.msg.reqExitBattle;
+            if (gameRoomDic.TryGetValue(req.roomId, out var room))
+            {
+                room.SetExit(req.uid);
+            }
+
+            Msg msg = new Msg()
+            {
+                cmd = CMD.RspExitBattle,
+                rspExitBattle = new RspExitBattle
+                {
+
+                }
+            };
+            pack.session.SendMsg(msg);
+        }
+
     }
 }

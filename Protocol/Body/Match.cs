@@ -41,4 +41,16 @@ namespace Protocol.Body
     {
         public RoleState roleState;
     }
+    //退出游戏
+    [Serializable]
+    public class ReqExitBattle
+    {
+        public long uid;
+        public long roomId;
+    }
+    [Serializable]
+    public class RspExitBattle
+    {
+
+    }
 }

@@ -11,6 +11,26 @@
       "RelativeMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|solutionrelative:2dsurvivegameserver\\02sys\\room\\fsm\\roomstatefight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\2dsurvivegameserver\\03svc\\cachesvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|solutionrelative:2dsurvivegameserver\\03svc\\cachesvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5429E325-FC72-4BE6-9F1F-DE895870A26E}|Protocol\\Protocol.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\protocol\\body\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5429E325-FC72-4BE6-9F1F-DE895870A26E}|Protocol\\Protocol.csproj|solutionrelative:protocol\\body\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\2dsurvivegameserver\\02sys\\room\\fsm\\roomstateload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|solutionrelative:2dsurvivegameserver\\02sys\\room\\fsm\\roomstateload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\2dsurvivegameserver\\02sys\\room\\fsm\\roomstateend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|solutionrelative:2dsurvivegameserver\\02sys\\room\\fsm\\roomstateend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\2dsurvivegameserver\\02sys\\room\\fsm\\roomstateconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|solutionrelative:2dsurvivegameserver\\02sys\\room\\fsm\\roomstateconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\2dsurvivegameserver\\02sys\\room\\gameroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|solutionrelative:2dsurvivegameserver\\02sys\\room\\gameroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,28 +39,8 @@
       "RelativeMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|solutionrelative:2dsurvivegameserver\\02sys\\room\\roomsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\2dsurvivegameserver\\02sys\\room\\actors\\monsteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|solutionrelative:2dsurvivegameserver\\02sys\\room\\actors\\monsteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\2dsurvivegameserver\\02sys\\reconnectsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|solutionrelative:2dsurvivegameserver\\02sys\\reconnectsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FACD9087-2C8A-4688-9417-E81529423E8B}|GameEngine\\GameEngine.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\gameengine\\gameworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FACD9087-2C8A-4688-9417-E81529423E8B}|GameEngine\\GameEngine.csproj|solutionrelative:gameengine\\gameworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\2dsurvivegameserver\\03svc\\netsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|solutionrelative:2dsurvivegameserver\\03svc\\netsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\2dsurvivegameserver\\01common\\serversession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E545141-EB41-49DA-9C66-D48E98D70608}|2DSurviveGameServer\\2DSurviveGameServer.csproj|solutionrelative:2dsurvivegameserver\\01common\\serversession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5429E325-FC72-4BE6-9F1F-DE895870A26E}|Protocol\\Protocol.csproj|f:\\\u6E38\u620F\u6E90\u7801\\2dsurvivegameserver\\2dsurvivegameserver\\protocol\\body\\reconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5429E325-FC72-4BE6-9F1F-DE895870A26E}|Protocol\\Protocol.csproj|solutionrelative:protocol\\body\\reconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,67 +70,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GameWorld.cs",
-              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\GameEngine\\GameWorld.cs",
-              "RelativeDocumentMoniker": "GameEngine\\GameWorld.cs",
-              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\GameEngine\\GameWorld.cs",
-              "RelativeToolTip": "GameEngine\\GameWorld.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAiwA8AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T07:37:39.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameRoom.cs",
-              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\GameRoom.cs",
-              "RelativeDocumentMoniker": "2DSurviveGameServer\\02Sys\\Room\\GameRoom.cs",
-              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\GameRoom.cs",
-              "RelativeToolTip": "2DSurviveGameServer\\02Sys\\Room\\GameRoom.cs",
-              "ViewState": "AQIAALEAAAAAAAAAAAAkwMIAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T07:00:37.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ServerSession.cs",
-              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\01Common\\ServerSession.cs",
-              "RelativeDocumentMoniker": "2DSurviveGameServer\\01Common\\ServerSession.cs",
-              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\01Common\\ServerSession.cs",
-              "RelativeToolTip": "2DSurviveGameServer\\01Common\\ServerSession.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T03:06:41.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NetSvc.cs",
-              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\03Svc\\NetSvc.cs",
-              "RelativeDocumentMoniker": "2DSurviveGameServer\\03Svc\\NetSvc.cs",
-              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\03Svc\\NetSvc.cs",
-              "RelativeToolTip": "2DSurviveGameServer\\03Svc\\NetSvc.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAQwBUAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T02:13:04.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RoleActor.cs",
               "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\Actors\\RoleActor.cs",
               "RelativeDocumentMoniker": "2DSurviveGameServer\\02Sys\\Room\\Actors\\RoleActor.cs",
               "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\Actors\\RoleActor.cs",
               "RelativeToolTip": "2DSurviveGameServer\\02Sys\\Room\\Actors\\RoleActor.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAQwDEAAAAAAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAywCsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T08:14:29.807Z",
+              "WhenOpened": "2024-07-17T07:40:23.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Role.cs",
+              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\Protocol\\Body\\Role.cs",
+              "RelativeDocumentMoniker": "Protocol\\Body\\Role.cs",
+              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\Protocol\\Body\\Role.cs",
+              "RelativeToolTip": "Protocol\\Body\\Role.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAmwDIAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T07:34:55.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameRoom.cs",
+              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\GameRoom.cs",
+              "RelativeDocumentMoniker": "2DSurviveGameServer\\02Sys\\Room\\GameRoom.cs",
+              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\GameRoom.cs",
+              "RelativeToolTip": "2DSurviveGameServer\\02Sys\\Room\\GameRoom.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T07:16:04.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CacheSvc.cs",
+              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\03Svc\\CacheSvc.cs",
+              "RelativeDocumentMoniker": "2DSurviveGameServer\\03Svc\\CacheSvc.cs",
+              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\03Svc\\CacheSvc.cs",
+              "RelativeToolTip": "2DSurviveGameServer\\03Svc\\CacheSvc.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T06:57:14.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ReconnectSys.cs",
+              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\ReconnectSys.cs",
+              "RelativeDocumentMoniker": "2DSurviveGameServer\\02Sys\\ReconnectSys.cs",
+              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\ReconnectSys.cs",
+              "RelativeToolTip": "2DSurviveGameServer\\02Sys\\ReconnectSys.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAswBoAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T06:56:30.998Z",
               "EditorCaption": ""
             },
             {
@@ -141,60 +141,61 @@
               "RelativeDocumentMoniker": "2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateFight.cs",
               "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateFight.cs",
               "RelativeToolTip": "2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateFight.cs",
-              "ViewState": "AQIAAGEBAAAAAAAAAAAiwG0BAAAvAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAowC8AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T08:08:48.472Z",
+              "WhenOpened": "2024-07-17T05:01:41.474Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Reconnect.cs",
-              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\Protocol\\Body\\Reconnect.cs",
-              "RelativeDocumentMoniker": "Protocol\\Body\\Reconnect.cs",
-              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\Protocol\\Body\\Reconnect.cs",
-              "RelativeToolTip": "Protocol\\Body\\Reconnect.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAAwDkAAAAfAAAA",
+              "DocumentIndex": 6,
+              "Title": "RoomStateConfirm.cs",
+              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateConfirm.cs",
+              "RelativeDocumentMoniker": "2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateConfirm.cs",
+              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateConfirm.cs",
+              "RelativeToolTip": "2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateConfirm.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAxwBMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T08:08:39.584Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReconnectSys.cs",
-              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\ReconnectSys.cs",
-              "RelativeDocumentMoniker": "2DSurviveGameServer\\02Sys\\ReconnectSys.cs",
-              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\ReconnectSys.cs",
-              "RelativeToolTip": "2DSurviveGameServer\\02Sys\\ReconnectSys.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAIwDYAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T08:08:14.883Z",
+              "WhenOpened": "2024-07-17T04:52:47.023Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MonsterActor.cs",
-              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\Actors\\MonsterActor.cs",
-              "RelativeDocumentMoniker": "2DSurviveGameServer\\02Sys\\Room\\Actors\\MonsterActor.cs",
-              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\Actors\\MonsterActor.cs",
-              "RelativeToolTip": "2DSurviveGameServer\\02Sys\\Room\\Actors\\MonsterActor.cs",
-              "ViewState": "AQIAAKYAAAAAAAAAAAAmwFkAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T07:56:36.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "RoomSys.cs",
               "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\RoomSys.cs",
               "RelativeDocumentMoniker": "2DSurviveGameServer\\02Sys\\Room\\RoomSys.cs",
               "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\RoomSys.cs",
               "RelativeToolTip": "2DSurviveGameServer\\02Sys\\Room\\RoomSys.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAgwFIAAAAlAAAA",
+              "ViewState": "AQIAAHAAAAAAAAAAAAD4v3oAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T07:09:00.336Z",
+              "WhenOpened": "2024-07-16T11:49:50.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RoomStateLoad.cs",
+              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateLoad.cs",
+              "RelativeDocumentMoniker": "2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateLoad.cs",
+              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateLoad.cs",
+              "RelativeToolTip": "2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateLoad.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T11:40:04.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RoomStateEnd.cs",
+              "DocumentMoniker": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateEnd.cs",
+              "RelativeDocumentMoniker": "2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateEnd.cs",
+              "ToolTip": "F:\\\u6E38\u620F\u6E90\u7801\\2DSurviveGameServer\\2DSurviveGameServer\\2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateEnd.cs",
+              "RelativeToolTip": "2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateEnd.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T11:40:00.057Z",
               "EditorCaption": ""
             }
           ]

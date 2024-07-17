@@ -15,7 +15,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
         public override void Enter()
         {
             confirmArr = new bool[Room.UIdArr.Length];
-            TimerSvc.Instance.AddTask(30000, ReachTimeLimit);
+            TimerSvc.Instance.AddTask(10000, ReachTimeLimit);
         }
 
         public override void Exit()
