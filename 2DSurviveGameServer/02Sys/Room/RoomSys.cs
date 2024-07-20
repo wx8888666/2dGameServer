@@ -77,13 +77,13 @@ namespace _2DSurviveGameServer._02Sys.Room
 
         void SndRoleState(MsgPack pack)
         {
-            Task.Run(() =>
-            {
+            //Task.Run(() =>
+            //{
                 if (gameRoomDic.TryGetValue(pack.msg.sndRoleState.roomId, out GameRoom room))
                 {
                     room.SndRoleState(pack.msg.sndRoleState.uid, pack.msg.sndRoleState.roleState);
                 }
-            });
+            //});
         }
         void SndEnterRoom(MsgPack pack)
         {

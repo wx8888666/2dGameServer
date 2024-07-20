@@ -376,6 +376,12 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
 
         public void UpdateRole(int posIndex, RoleState roleState)
         {
+            if (posIndex < 0 || posIndex >= roleActorList.Count)
+            {
+                // 记录日志或处理错误
+                Console.WriteLine($"Invalid index: {posIndex}");
+                return;
+            }
             roleActorList[posIndex].UpdateState(roleState);
         }
         //public void UpdateMonster(int monsterIndex, MonsterState monsterState)

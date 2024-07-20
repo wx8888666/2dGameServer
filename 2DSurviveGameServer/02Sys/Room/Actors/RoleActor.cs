@@ -10,7 +10,7 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
         //的一个类放到客户端上，那么就可以使用Rolestate来充当客户端上的。从而达到同步的状态
         public RoleState RoleState { get; set; } = new RoleState();
         public bool isStateChanged { get; set; } = false;
-
+        private readonly object bodyLock = new object(); // 锁对象，用于同步对 Body 的访问
         public override void OnDestory()
         {
         }
@@ -38,11 +38,20 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
         }
         public void UpdateState(RoleState roleState)
         {
-      
-            RoleState.pos = roleState.pos;
-            RoleState.dir = roleState.dir;
-            Body.Position = roleState.pos.ToVector2();
-            RoleState.mousePos=roleState.mousePos;
+            if (roleState.id < 0)
+            {
+                // 记录日志或处理错误
+                Console.WriteLine($"Invalid proxy ID: {roleState.id}");
+                return;
+            }
+            lock (bodyLock) // 锁定以确保对 Body 的线程安全访问
+            {
+                RoleState.pos = roleState.pos;
+                RoleState.dir = roleState.dir;
+                Body.Position = roleState.pos.ToVector2();
+            }
+
+            RoleState.mousePos = roleState.mousePos;
             isStateChanged = true;
         }
     }
