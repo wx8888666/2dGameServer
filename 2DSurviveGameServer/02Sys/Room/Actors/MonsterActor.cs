@@ -184,8 +184,9 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
 
         private void MoveToTargetPosition()
         {
-            
-                    Vector2 direction = Vector2.Normalize(targetPosition - Body.Position);
+            lock (_lock)
+            {
+                Vector2 direction = Vector2.Normalize(targetPosition - Body.Position);
                 Vector2 newPosition = Body.Position + direction * moveSpeed;
 
                 // 边界检查
@@ -199,7 +200,7 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
                 monsterState.pos = Body.Position.ToNetVector2();
                 monsterState.dir = direction.ToNetVector2();
                 isStateChanged = true;
-            
+            }
         }
         private bool DetectPlayersInRadius(float radius)
         {

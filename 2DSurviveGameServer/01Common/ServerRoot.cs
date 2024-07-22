@@ -49,6 +49,7 @@ namespace _2DSurviveGameServer._01Common
             TaskSvc.Instance.Init();
             TaskSys.Instance.Init();
             BagSys.Instance.Init();
+            ResSvc.Instance.Init();
         }
 
         public void Update()

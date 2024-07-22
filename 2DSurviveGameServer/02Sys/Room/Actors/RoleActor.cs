@@ -33,7 +33,7 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
         public void getIntegral()
         {
             RoleState.integral += 5;
-            this.Log(RoleState.integral);
+            //this.Log(RoleState.integral);
             isStateChanged = true;
         }
         public void UpdateState(RoleState roleState)

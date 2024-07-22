@@ -8,19 +8,19 @@ namespace Protocol.Body
     public class WeaponObject : ActorObject
     {
         //武器资源
-        public int assetId;
+        public int assetId{ get; set; }
 
-        public int damage;
+        public int damage { get; set; }
 
-        public float rate;
+        public float rate { get; set; }
 
-        public int magazinesCount;
+        public int magazinesCount { get; set; }
 
-        public int maxMagazinesCount;
+        public int maxMagazinesCount { get; set; }
 
-        public int reserveMagazineCount;
+        public int reserveMagazineCount { get; set; }
 
-        public int maxReserveMagazineCount;
+        public int maxReserveMagazineCount { get; set; }
     }
     [Serializable]
     public class NtfSpawnWeapon

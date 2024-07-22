@@ -1,0 +1,4 @@
+﻿Id,Name,Rate,MagCount,SpareMagCount
+1,Pistol,0.5,7,70
+2,Submachine,0.1,40,400
+3,Shot,0.8,4,40

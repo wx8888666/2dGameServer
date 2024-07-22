@@ -76,19 +76,10 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
             });
 
             // 创建武器
-            SpawnWeapon(new WeaponObject[]
+            for (int i = 0; i < 2; i++) // 假设生成两个随机武器
             {
-            new WeaponObject
-            {
-                assetId = 0,
-                pos = new Protocol.Body.NetVector2(0, 0),
-            },
-            new WeaponObject
-            {
-                assetId = 1,
-                pos = new Protocol.Body.NetVector2(1, 3),
+                SpawnRandomWeapon();
             }
-            });
 
             Task.Run(FightTask);
         }
@@ -117,25 +108,34 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 }
             });
         }
-
-        void SpawnWeapon(params WeaponObject[] weaponObject)
+        //产生随机的武器并通知所以客户端
+        void SpawnRandomWeapon()
         {
-            foreach (WeaponObject weapon in weaponObject)
+            WeaponObject randomWeaponConfig = ResSvc.Instance.GetRandomWeaponConfig();
+            if (randomWeaponConfig != null)
             {
-                WeaponActor weaponActor = gameWorld.Create<WeaponActor>(new Microsoft.Xna.Framework.Vector2(3, 3));
+                Random random = new Random();
+                float randomX = (float)(random.NextDouble() * 10 - 5); // 随机生成 -5 到 5 之间的浮点数
+                float randomY = (float)(random.NextDouble() * 10 - 5); // 随机生成 -5 到 5 之间的浮点数
+
+                WeaponActor weaponActor = gameWorld.Create<WeaponActor>(new Microsoft.Xna.Framework.Vector2(randomX, randomY));
                 weaponActor.Id = YitIdHelper.NextId();
                 weaponDic.Add(weaponActor.Id, weaponActor);
-                weaponActor.UpdateWeapon(weapon);
+                weaponActor.UpdateWeapon(randomWeaponConfig);
                 weaponActor.Start();
-            }
-            Broadcast(new Protocol.Msg
-            {
-                cmd = Protocol.CMD.NtfSpawnWeapon,
-                ntfSpawnWeapon = new NtfSpawnWeapon
+
+                // 更新武器的坐标
+                randomWeaponConfig.pos = new Protocol.Body.NetVector2(randomX, randomY);
+
+                Broadcast(new Protocol.Msg
                 {
-                    weaponObjectArr = weaponObject
-                }
-            });
+                    cmd = Protocol.CMD.NtfSpawnWeapon,
+                    ntfSpawnWeapon = new NtfSpawnWeapon
+                    {
+                        weaponObjectArr = new WeaponObject[] { randomWeaponConfig }
+                    }
+                });
+            }
         }
 
         void FightTask()
