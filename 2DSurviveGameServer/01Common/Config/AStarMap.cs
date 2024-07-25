@@ -1,4 +1,4 @@
-﻿using _2DSurviveGameServer._01Common.Config;
+﻿
 using _2DSurviveGameServer._02Sys.Room.Actors;
 using _2DSurviveGameServer._02Sys.Room.FSM;
 using GameEngine;
@@ -52,6 +52,7 @@ namespace _2DSurviveGameServer._01Common.Config
 
         public AStarMap(JObject jo)
         {
+
 
             m_NodeRadius = float.Parse(jo["NodeRadius"].ToString());
             m_NodeDiameter = float.Parse(jo["NodeDiameter"].ToString());
@@ -115,10 +116,10 @@ namespace _2DSurviveGameServer._01Common.Config
             //Console.WriteLine($"Comparing nodes: a.f={a.f}, b.f={b.f}");
             if (a.f > b.f)
                 return 1;
-            else if (a.f < b.f)
-                return -1;
+            else if (a.f == b.f)
+                return 1;
             else
-                return 0;
+                return -1;
         }
 
         public int FindPath(Vector2 startPos, Vector2 endPos, out List<AStarNode> path)
@@ -190,6 +191,7 @@ namespace _2DSurviveGameServer._01Common.Config
                     return -1;
                 }
                 openList = openList.Where(node => node != null).ToList();
+                //LogOpenList();
                 openList.Sort(SortOpenList);
 
                 closeList.Add(openList[0]);
@@ -219,9 +221,15 @@ namespace _2DSurviveGameServer._01Common.Config
             }
         }
 
+        private void LogOpenList()
+        {
+            foreach (var node in openList)
+            {
+                Console.WriteLine($"Node: x={node.x}, y={node.y}, f={node.f}, g={node.g}, h={node.h}, type={node.type}");
+            }
+        }
 
-
-        private void FindNearlyNodeToOpenList(int x, int y, float cost, AStarNode father, AStarNode end)
+        private void FindNearlyNodeToOpenList(int x, int y, float g, AStarNode father, AStarNode end)
         {
             if (x < 0 || x >= mapW || y < 0 || y >= mapH)
             {
@@ -234,25 +242,15 @@ namespace _2DSurviveGameServer._01Common.Config
                 return;
             }
 
-            float g = father.g + cost;
-            if (openList.Contains(node))
-            {
-                if (g < node.g)
-                {
-                    node.g = g;
-                    node.father = father;
-                    node.f = node.g + node.h;
-                }
-            }
-            else
-            {
-                node.g = g;
-                node.h = Math.Abs(end.x - node.x) + Math.Abs(end.y - node.y);
-                node.f = node.g + node.h;
-                node.father = father;
-                openList.Add(node);
-                Console.WriteLine($"Adding node to openList: x={node.x}, y={node.y}, f={node.f}, g={node.g}, h={node.h}");
-            }
+
+            node.father = father;
+            node.g = father.g + g;
+            node.h = Math.Abs(end.x - node.x) + Math.Abs(end.y - node.y);
+            node.f = node.g + node.h;
+            //Console.WriteLine($"Adding node to openList: x={node.x}, y={node.y}, f={node.f}, g={node.g}, h={node.h}");
+            openList.Add(node);
+            
+            
         }
     }
 }

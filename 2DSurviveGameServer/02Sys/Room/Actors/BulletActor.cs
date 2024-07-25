@@ -67,7 +67,7 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
             // 检测与敌人的碰撞逻辑
             foreach (var enemy in RoomStateFight.Instance.GetMonsters())
             {
-                if (Vector2.Distance(Body.Position, enemy.Body.Position) < 1.0f) // 假设碰撞距离为1.0f
+                if (Vector2.Distance(Body.Position, enemy.Body.Position) < 5.0f) // 假设碰撞距离为1.0f
                 {
                     // 对敌人造成伤害
                     enemy.TakeDamage(damage,BulletState.UId);

@@ -178,6 +178,8 @@ namespace Protocol.Body
         public int MonsterType;
         public long id { get; set; }
         public NetVector2 pos { get; set; }
+        public NetVector2 startPos { get; set; }
+        public NetVector2 endPos { get; set; }
         public NetVector2 dir { get; set; }
         public string monsterName { get; set; }
         public StateEnum state { get; set; }

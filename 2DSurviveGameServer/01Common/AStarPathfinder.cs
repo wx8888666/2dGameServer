@@ -1,167 +1,190 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using Microsoft.Xna.Framework;
+using static Dm.net.buffer.ByteArrayBuffer;
 
 namespace _2DSurviveGameServer._01Common
 {
-    public class AStarPathfinder
-    {
-        private int width, height;
-        private Node[,] nodes;
+    //public class AStarMap
+    //{
+    //    private bool[,] walkableTiles;
 
-        public AStarPathfinder(int width, int height)
-        {
-            this.width = width;
-            this.height = height;
-            nodes = new Node[width, height];
+    //    public AStarMap(int width, int height)
+    //    {
+    //        walkableTiles = new bool[width, height];
+    //        for (int i = 0; i < width; i++)
+    //        {
+    //            for (int j = 0; j < height; j++)
+    //            {
+    //                walkableTiles[i, j] = true; // 默认为可行走
+    //            }
+    //        }
+    //    }
 
-            for (int x = 0; x < width; x++)
-            {
-                for (int y = 0; y < height; y++)
-                {
-                    nodes[x, y] = new Node(new Vector2(x, y));
-                }
-            }
-        }
+    //    public bool IsWalkable(int x, int y)
+    //    {
+    //        return walkableTiles[x, y];
+    //    }
 
-        public List<Vector2> FindPath(Vector2 start, Vector2 end)
-        {
-            int startX = (int)start.X;
-            int startY = (int)start.Y;
-            int endX = (int)end.X;
-            int endY = (int)end.Y;
+    //    public void SetWalkable(int x, int y, bool isWalkable)
+    //    {
+    //        walkableTiles[x, y] = isWalkable;
+    //    }
 
-            // 边界检查
-            if (startX < 0 || startX >= width || startY < 0 || startY >= height ||
-                endX < 0 || endX >= width || endY < 0 || endY >= height)
-            {
-                throw new IndexOutOfRangeException("Start or end position is outside the bounds of the grid.");
-            }
+    //    public int Width => walkableTiles.GetLength(0);
+    //    public int Height => walkableTiles.GetLength(1);
+    //}
+    //public class AStarPathfinder
+    //{
+    //    private AStarMap map;
 
-            // A* 搜索算法实现 (伪代码)
-            List<Vector2> path = new List<Vector2>();
+    //    public AStarPathfinder(AStarMap map)
+    //    {
+    //        this.map = map;
+    //    }
 
-            // 初始化开放列表和封闭列表
-            List<Node> openList = new List<Node>();
-            HashSet<Node> closedList = new HashSet<Node>();
+    //    public List<Vector2> FindPath(Vector2 start, Vector2 end)
+    //    {
+    //        // 确保起点和终点在地图内
+    //        int startX = (int)(start.X + map.Width / 2);
+    //        int startY = (int)(start.Y + map.Height / 2);
+    //        int endX = (int)(end.X + map.Width / 2);
+    //        int endY = (int)(end.Y + map.Height / 2);
 
-            Node startNode = nodes[startX, startY];
-            Node endNode = nodes[endX, endY];
+    //        this.Log("Starting pathfinding from ({0},{1}) to ({2},{3})", startX, startY, endX, endY);
 
-            openList.Add(startNode);
+    //        if (startX < 0 || startX >= map.Width || startY < 0 || startY >= map.Height ||
+    //            endX < 0 || endX >= map.Width || endY < 0 || endY >= map.Height)
+    //        {
+    //            this.Log("Start or End is out of map bounds.");
+    //            return new List<Vector2>();
+    //        }
 
-            while (openList.Count > 0)
-            {
-                // 找到开放列表中具有最低 F 成本的节点
-                Node currentNode = openList[0];
-                for (int i = 1; i < openList.Count; i++)
-                {
-                    if (openList[i].F < currentNode.F ||
-                        (openList[i].F == currentNode.F && openList[i].H < currentNode.H))
-                    {
-                        currentNode = openList[i];
-                    }
-                }
+    //        Node startNode = new Node(new Vector2(startX, startY)) { GCost = 0, HCost = Heuristic(new Vector2(startX, startY), new Vector2(endX, endY)) };
+    //        Node endNode = new Node(new Vector2(endX, endY));
 
-                openList.Remove(currentNode);
-                closedList.Add(currentNode);
+    //        List<Node> openList = new List<Node> { startNode };
+    //        HashSet<Node> closedList = new HashSet<Node>();
 
-                if (currentNode == endNode)
-                {
-                    // 构建路径
-                    while (currentNode != startNode)
-                    {
-                        path.Add(currentNode.Position);
-                        currentNode = currentNode.Parent;
-                    }
-                    path.Reverse();
-                    return path;
-                }
+    //        while (openList.Count > 0)
+    //        {
+    //            Node currentNode = openList.OrderBy(n => n.FCost).First();
+    //            openList.Remove(currentNode);
+    //            closedList.Add(currentNode);
 
-                // 遍历当前节点的所有相邻节点
-                foreach (Node neighbor in GetNeighbors(currentNode))
-                {
-                    if (closedList.Contains(neighbor) || !IsWalkable(neighbor.Position))
-                    {
-                        continue;
-                    }
+    //            this.Log("Current Node: ({0},{1}), FCost: {2}", currentNode.Position.X, currentNode.Position.Y, currentNode.FCost);
 
-                    int tentativeG = currentNode.G + GetDistance(currentNode, neighbor);
-                    if (tentativeG < neighbor.G || !openList.Contains(neighbor))
-                    {
-                        neighbor.G = tentativeG;
-                        neighbor.H = GetDistance(neighbor, endNode);
-                        neighbor.Parent = currentNode;
+    //            if (currentNode.Position.Equals(endNode.Position))
+    //            {
+    //                this.Log("Path Found");
+    //                return RetracePath(startNode, currentNode);
+    //            }
 
-                        if (!openList.Contains(neighbor))
-                        {
-                            openList.Add(neighbor);
-                        }
-                    }
-                }
-            }
+    //            foreach (Node neighbor in GetNeighbors(currentNode))
+    //            {
+    //                int neighborX = (int)(neighbor.Position.X + map.Width / 2);
+    //                int neighborY = (int)(neighbor.Position.Y + map.Height / 2);
 
-            return path; // 没有找到路径
-        }
+    //                this.Log("Checking if neighbor ({0},{1}) is walkable.", neighborX, neighborY);
 
-        private IEnumerable<Node> GetNeighbors(Node node)
-        {
-            List<Node> neighbors = new List<Node>();
+    //                if (!map.IsWalkable(neighborX, neighborY) || closedList.Contains(neighbor))
+    //                {
+    //                    this.Log("Neighbor ({0},{1}) is not walkable or already in closed list", neighborX, neighborY);
+    //                    continue;
+    //                }
 
-            int x = (int)node.Position.X;
-            int y = (int)node.Position.Y;
+    //                float newMovementCostToNeighbor = currentNode.GCost + Vector2.Distance(currentNode.Position, neighbor.Position);
+    //                if (newMovementCostToNeighbor < neighbor.GCost || !openList.Contains(neighbor))
+    //                {
+    //                    neighbor.GCost = newMovementCostToNeighbor;
+    //                    neighbor.HCost = Heuristic(neighbor.Position, endNode.Position);
+    //                    neighbor.Parent = currentNode;
 
-            // 添加相邻的八个方向的节点
-            for (int dx = -1; dx <= 1; dx++)
-            {
-                for (int dy = -1; dy <= 1; dy++)
-                {
-                    if (dx == 0 && dy == 0)
-                    {
-                        continue;
-                    }
+    //                    if (!openList.Contains(neighbor))
+    //                    {
+    //                        this.Log("Adding Neighbor ({0},{1}) to open list with FCost: {2}", neighbor.Position.X, neighbor.Position.Y, neighbor.FCost);
+    //                        openList.Add(neighbor);
+    //                    }
+    //                }
+    //            }
+    //        }
 
-                    int nx = x + dx;
-                    int ny = y + dy;
+    //        this.Log("Path not found");
+    //        return new List<Vector2>();
+    //    }
 
-                    // 检查边界
-                    if (nx >= 0 && nx < width && ny >= 0 && ny < height)
-                    {
-                        neighbors.Add(nodes[nx, ny]);
-                    }
-                }
-            }
 
-            return neighbors;
-        }
 
-        private bool IsWalkable(Vector2 position)
-        {
-            // 这里可以添加检查是否可以走的逻辑，例如检查是否是障碍物
-            return true;
-        }
+    //    private float Heuristic(Vector2 a, Vector2 b)
+    //    {
+    //        return Math.Abs(a.X - b.X) + Math.Abs(a.Y - b.Y);
+    //    }
 
-        private int GetDistance(Node a, Node b)
-        {
-            int dstX = (int)Math.Abs(a.Position.X - b.Position.X);
-            int dstY = (int)Math.Abs(a.Position.Y - b.Position.Y);
-            return dstX + dstY;
-        }
+    //    private List<Vector2> RetracePath(Node startNode, Node endNode)
+    //    {
+    //        List<Vector2> path = new List<Vector2>();
+    //        Node currentNode = endNode;
 
-        private class Node
-        {
-            public Vector2 Position { get; }
-            public int G { get; set; }
-            public int H { get; set; }
-            public int F => G + H;
-            public Node Parent { get; set; }
+    //        while (currentNode != startNode)
+    //        {
+    //            path.Add(currentNode.Position);
+    //            currentNode = currentNode.Parent;
+    //        }
+    //        path.Add(startNode.Position); // 添加起点
+    //        path.Reverse();
+    //        return path;
+    //    }
 
-            public Node(Vector2 position)
-            {
-                Position = position;
-                G = int.MaxValue;
-                H = 0;
-                Parent = null;
-            }
-        }
-    }
+    //    private List<Node> GetNeighbors(Node node)
+    //    {
+    //        List<Node> neighbors = new List<Node>();
+    //        Vector2[] neighborOffsets = new Vector2[]
+    //        {
+    //        new Vector2(0, 1),
+    //        new Vector2(1, 0),
+    //        new Vector2(0, -1),
+    //        new Vector2(-1, 0),
+    //        new Vector2(1, 1),
+    //        new Vector2(1, -1),
+    //        new Vector2(-1, 1),
+    //        new Vector2(-1, -1)
+    //        };
+
+    //        foreach (Vector2 offset in neighborOffsets)
+    //        {
+    //            Vector2 neighborPosition = node.Position + offset;
+    //            if (neighborPosition.X >= -map.Width / 2 && neighborPosition.X < map.Width / 2 &&
+    //                neighborPosition.Y >= -map.Height / 2 && neighborPosition.Y < map.Height / 2)
+    //            {
+    //                neighbors.Add(new Node(neighborPosition));
+    //            }
+    //        }
+
+    //        return neighbors;
+    //    }
+    //}
+    //public class Node
+    //{
+    //    public Vector2 Position { get; }
+    //    public float GCost { get; set; } // 从起点到这个节点的移动代价
+    //    public float HCost { get; set; } // 从这个节点到终点的估计代价（启发式函数）
+    //    public float FCost => GCost + HCost; // 总代价
+    //    public Node Parent { get; set; } // 父节点，用于重建路径
+
+    //    public Node(Vector2 position)
+    //    {
+    //        Position = position;
+    //    }
+    //    public override bool Equals(object obj)
+    //    {
+    //        if (obj == null || !(obj is Node)) return false;
+    //        return Position.Equals(((Node)obj).Position);
+    //    }
+
+    //    public override int GetHashCode()
+    //    {
+    //        return Position.GetHashCode();
+    //    }
+    //}
+
 }

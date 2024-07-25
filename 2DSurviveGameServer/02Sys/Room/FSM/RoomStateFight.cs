@@ -1,4 +1,5 @@
-﻿using _2DSurviveGameServer._01Common.Config;
+﻿
+using _2DSurviveGameServer._01Common.Config;
 using _2DSurviveGameServer._02Sys.Room.Actors;
 using _2DSurviveGameServer._03Svc;
 using _2DSurviveGameServer.Helpers;
@@ -86,9 +87,10 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
 
         void SpawnMonsters(int count)
         {
-            var map = new AStarMap(mapJo);
+            
             for (int i = 0; i < count; i++)
             {
+                var map = new AStarMap(mapJo);
                 MonsterActor monsterActor = gameWorld.Create<MonsterActor>(new Microsoft.Xna.Framework.Vector2(2 + i, 2 + i));
                 monsterActor.Id = Monsterid + i;
                 Monsterid++;
@@ -96,6 +98,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 monsterActor.monsterState.pos = monsterActor.Body.Position.ToNetVector2();
                 monsterActor.monsterState.dir = new Protocol.Body.NetVector2();
                 monsterActor.Start();
+                monsterActor.Init(map);
                 monsterActorList.Add(monsterActor);
             }
 
