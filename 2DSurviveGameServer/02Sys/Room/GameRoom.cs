@@ -248,5 +248,15 @@ namespace _2DSurviveGameServer._02Sys.Room
                 }
             }
         }
+        //public void ReqCollider(ReqCollider req)
+        //{
+        //    if (currentRoomState == RoomStateEnum.Fight)
+        //    {
+        //        if (fsm[currentRoomState] is RoomStateFight state)
+        //        {
+        //            state.ReqCollider(req);   
+        //        }
+        //    }
+        //}
     }
 }

@@ -200,4 +200,11 @@ namespace Protocol.Body
     {
         public MonsterState monsterState;
     }
+    //[Serializable]
+    //public class ReqCollider
+    //{
+    //    public long roomId;
+    //    public MonsterState monsterState;
+    //    public BulletState bulletState;
+    //}
 }

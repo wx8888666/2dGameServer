@@ -66,5 +66,6 @@ namespace Protocol
         NtfBulletState,
         ReqExitBattle,
         RspExitBattle,
+        //ReqCollider
     }
 }

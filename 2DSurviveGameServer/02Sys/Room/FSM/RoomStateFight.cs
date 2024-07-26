@@ -357,7 +357,10 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 this.Warn($"异常id:{reqWeaponFire.uid} 发射子弹！");
             }
         }
-
+        //public void ReqCollider(ReqCollider req)
+        //{
+        //    if(bulletActorsList.Contains(req.bulletState))
+        //}
         public override void Exit()
         {
             cancellationTokenSource.Cancel();

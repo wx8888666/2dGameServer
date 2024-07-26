@@ -181,7 +181,7 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
             }
             return res;
         }
-
+        //ref 与out 与c++中的&和*类似
         private bool FindRangeMinDistanceAliveRole(float range, out RoleActor role)
         {
             float minDistance = 99999999;

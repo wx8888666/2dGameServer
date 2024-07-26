@@ -23,6 +23,7 @@ namespace _2DSurviveGameServer._02Sys.Room
             netSvc.AddMsgHandle(CMD.ReqPickupWeapon, ReqPickupWeapon);
             netSvc.AddMsgHandle(CMD.ReqWeaponFire, ReqWeaponFire);
             netSvc.AddMsgHandle(CMD.ReqExitBattle, ReqExitBattle);
+            //netSvc.AddMsgHandle(CMD.ReqCollider, ReqCollider);
         }
 
         public override void Update()
@@ -134,6 +135,14 @@ namespace _2DSurviveGameServer._02Sys.Room
             };
             pack.session.SendMsg(msg);
         }
+        //public void ReqCollider(MsgPack pack)
+        //{
+        //    var req= pack.msg.reqCollider;
+        //    if (gameRoomDic.TryGetValue(req.roomId, out GameRoom room))
+        //    {
+        //        room.ReqCollider(req);  
+        //    }
+        //}
 
     }
 }
