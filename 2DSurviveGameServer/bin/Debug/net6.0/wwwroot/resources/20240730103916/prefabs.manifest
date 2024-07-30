@@ -1,0 +1,97 @@
+ManifestFileVersion: 0
+CRC: 2443716489
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 787624bcfe551eee91b3b839b1f31e62
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 996f320f42cb0ed9032f72ddaff40c4b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 50
+  Script: {instanceID: 0}
+- Class: 61
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0002c1b55a1d963429a6393b559b517c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 842c1730d415f5648b61392bd85719f2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a8baf5ed2bb297547af102256da5175b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8e2b35bf062da9b41893c07d4f25391f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7416cacbc607c594380b63c44833d540, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f857b1731541af844897842d0b6322c3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ce9f599df7481f14dbcc999bcd12db04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5c960e52891d3d84e8066a38c44ec0a3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e5dd64ba89bc31b4aaa579c2ad178c88, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 221
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Protocol
+  ClassName: Protocol.Body.BulletState
+- AssemblyName: Protocol
+  ClassName: Protocol.Body.NetVector2
+- AssemblyName: Protocol
+  ClassName: Protocol.Body.WeaponObject
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.FontData
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+Assets:
+- Assets/Resources/Prefab/weapon/Weapon0.prefab
+- Assets/Resources/Prefab/Role/Role2.prefab
+- Assets/Resources/Prefab/Empty2.prefab
+- Assets/Resources/Prefab/weapon/Shot1.prefab
+- Assets/Resources/Prefab/weapon/weapon1.prefab
+- Assets/Resources/Prefab/Role/char.prefab
+- Assets/Resources/Prefab/weapon/Weapon2.prefab
+- Assets/Resources/Prefab/Role/Role1.prefab
+- Assets/Resources/Prefab/Enemy0.prefab
+- Assets/Resources/Prefab/weapon/Shot2.prefab
+- Assets/Resources/Prefab/weapon/Bullet.prefab
+- Assets/Resources/Prefab/UserInfo.prefab
+- Assets/Resources/Prefab/weapon/Shot0.prefab
+Dependencies: []
