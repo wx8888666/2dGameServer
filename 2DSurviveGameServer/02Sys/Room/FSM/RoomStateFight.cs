@@ -333,6 +333,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                     cmd = Protocol.CMD.RspWeaponFire,
                     rspWeaponFire = new Protocol.Body.RspWeaponFire
                     {
+                        uid=role.RoleState.uid,
                         isFireSuccess = isFireSuccess,
                         magCount = role.RoleState.weaponObject.magazinesCount,
                         spareMagCount = role.RoleState.weaponObject.reserveMagazineCount,
@@ -341,15 +342,15 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                         bulletState = bulletState,
                     }
                 });
-                Broadcast(new Protocol.Msg
-                {
-                    cmd = Protocol.CMD.NtfBulletState,
-                    ntfBulletState = new Protocol.Body.NtfBulletState
-                    {
-                        uid = reqWeaponFire.uid,
-                        BulletState = bulletState
-                    }
-                });
+                //Broadcast(new Protocol.Msg
+                //{
+                //    cmd = Protocol.CMD.NtfBulletState,
+                //    ntfBulletState = new Protocol.Body.NtfBulletState
+                //    {
+                //        uid = reqWeaponFire.uid,
+                //        BulletState = bulletState
+                //    }
+                //});
                 //this.ColorLog(PEUtils.LogColor.Green, "成功发射");
             }
             else

@@ -39,6 +39,7 @@ namespace Protocol.Body
     [Serializable]
     public class RspWeaponFire
     {
+        public long uid;
         public bool isFireSuccess = false;//是否射击成功
         public int magCount;//当前弹夹子弹数量
         public int spareMagCount;//当前后备弹夹子弹数量

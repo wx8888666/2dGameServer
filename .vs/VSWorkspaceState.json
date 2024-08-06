@@ -6,6 +6,7 @@
     "\\2DSurviveGameServer\\02Sys\\Room",
     "\\2DSurviveGameServer\\02Sys\\Room\\FSM",
     "\\2DSurviveGameServer\\03Svc",
+    "\\2DSurviveGameServer\\Controllers",
     "\\GameEngine",
     "\\Protocol",
     "\\Protocol\\Body",

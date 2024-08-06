@@ -1,10 +1,26 @@
-[L]# 06:44:57--323  ThreadID:1 >> Server Start...
-[L]# 06:45:03--054  ThreadID:7 >> Client Connected sid:1
-[L]# 06:45:08--703  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：1
-[L]# 06:45:19--150  ThreadID:25 >> Client Connected sid:2
-[L]# 06:45:20--966  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：2
-[L]# 06:45:20--974  ThreadID:1 >> id为574140903206917的房间现在进入Confirm状态
-[L]# 06:45:20--975  ThreadID:1 >> 创建了一个房间，当前房间数量：1
-[L]# 06:45:20--976  ThreadID:1 >> 匹配成功，当前匹配队列人数：0
-[L]# 06:45:22--262  ThreadID:1 >> id为574140903206917的房间现在进入Load状态
-[L]# 06:45:23--434  ThreadID:1 >> id为574140903206917的房间现在进入Fight状态
+[L]# 02:02:54--882  ThreadID:1 >> Server Start...
+[L]# 02:02:58--793  ThreadID:8 >> Client Connected sid:1
+[L]# 02:03:00--836  ThreadID:26 >> Client Connected sid:2
+[L]# 02:03:05--063  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：1
+[L]# 02:03:05--723  ThreadID:1 >> 新增一个人到匹配队列，当前匹配队列人数：2
+[L]# 02:03:05--732  ThreadID:1 >> id为576548797255685的房间现在进入Confirm状态
+[L]# 02:03:05--736  ThreadID:1 >> 创建了一个房间，当前房间数量：1
+[L]# 02:03:05--736  ThreadID:1 >> 匹配成功，当前匹配队列人数：0
+[L]# 02:03:07--627  ThreadID:1 >> id为576548797255685的房间现在进入Load状态
+[L]# 02:03:08--820  ThreadID:1 >> id为576548797255685的房间现在进入Fight状态
+[L]# 02:04:13--323  ThreadID:52 >> Client Connected sid:3
+[L]# 02:04:15--251  ThreadID:1 >> uid:8 变更连接 sid:3
+[L]# 02:07:12--492  ThreadID:51 >> Client Connected sid:4
+[L]# 02:07:13--712  ThreadID:1 >> uid:8 变更连接 sid:4
+[L]# 02:09:51--922  ThreadID:54 >> Client Connected sid:5
+[L]# 02:09:53--833  ThreadID:1 >> uid:8 变更连接 sid:5
+[L]# 02:12:47--937  ThreadID:43 >> Client Connected sid:6
+[L]# 02:12:49--650  ThreadID:1 >> uid:8 变更连接 sid:6
+[L]# 02:18:00--141  ThreadID:51 >> Client Connected sid:7
+[L]# 02:18:04--708  ThreadID:1 >> uid:8 变更连接 sid:7
+[L]# 02:28:40--992  ThreadID:43 >> Client Connected sid:8
+[L]# 02:28:43--152  ThreadID:1 >> uid:8 变更连接 sid:8
+[L]# 02:33:12--430  ThreadID:40 >> Client Connected sid:9
+[L]# 02:33:15--518  ThreadID:1 >> uid:8 变更连接 sid:9
+[L]# 02:39:22--971  ThreadID:51 >> Client Connected sid:10
+[L]# 02:39:24--678  ThreadID:1 >> uid:8 变更连接 sid:10
