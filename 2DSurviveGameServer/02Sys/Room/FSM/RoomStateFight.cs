@@ -203,17 +203,7 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                 {
                     bullet.Update();
                 }
-                //if (bulletActorsList.Count > 0)
-                //{
-                //    Broadcast(new Protocol.Msg
-                //    {
-                //        cmd = Protocol.CMD.NtfBulletState,
-                //        ntfBulletState = new Protocol.Body.NtfBulletState
-                //        {
-                //            BulletStates = bulletActorsList.Select(p => p.BulletState).ToArray()
-                //        }
-                //    });
-                //}
+                
             }
 
             void BroadcastMonsters()
@@ -255,7 +245,6 @@ namespace _2DSurviveGameServer._02Sys.Room.FSM
                         v.isStateChanged = false;
                     }
                 }
-
                 if (roleStateList.Count > 0)
                 {
                     Broadcast(new Protocol.Msg

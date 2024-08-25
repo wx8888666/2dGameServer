@@ -4,14 +4,13 @@
     "\\2DSurviveGameServer",
     "\\2DSurviveGameServer\\02Sys",
     "\\2DSurviveGameServer\\02Sys\\Room",
+    "\\2DSurviveGameServer\\02Sys\\Room\\Actors",
     "\\2DSurviveGameServer\\02Sys\\Room\\FSM",
     "\\2DSurviveGameServer\\03Svc",
     "\\2DSurviveGameServer\\Controllers",
     "\\GameEngine",
-    "\\Protocol",
-    "\\Protocol\\Body",
-    "\\Protocol\\DBModel"
+    "\\Protocol"
   ],
-  "SelectedNode": "\\2DSurviveGameServer.sln",
+  "SelectedNode": "\\2DSurviveGameServer\\02Sys\\Room\\FSM\\RoomStateFight.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,4 +1,5 @@
-﻿using _2DSurviveGameServer.Helpers;
+﻿using _2DSurviveGameServer._01Common.Skill;
+using _2DSurviveGameServer.Helpers;
 using GameEngine;
 using Protocol.Body;
 
@@ -11,6 +12,8 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
         public RoleState RoleState { get; set; } = new RoleState();
         public bool isStateChanged { get; set; } = false;
         private readonly object bodyLock = new object(); // 锁对象，用于同步对 Body 的访问
+
+        private List<Skill> skills = new List<Skill>();
         public override void OnDestory()
         {
         }
@@ -20,7 +23,7 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
         }
         public override void Start()
         {
-            
+            //skills.Add(Fireball);
             RoleState.id=this.Id;
             RoleState.hp = 20;
             RoleState.maxHp=20;
@@ -29,6 +32,18 @@ namespace _2DSurviveGameServer._02Sys.Room.Actors
         public override void Update()
         {
 
+        }
+        //添加技能系统
+        public void AddSkill(Skill skill)
+        {
+            skills.Add(skill);
+        }
+        public void UseSkill(int skillIndex, float currentTime)
+        {
+            if (skillIndex >= 0 && skillIndex < skills.Count)
+            {
+                skills[skillIndex].Use(currentTime);
+            }
         }
         public void getIntegral()
         {
